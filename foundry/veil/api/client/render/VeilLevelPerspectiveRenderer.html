@@ -110,26 +110,28 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isRenderingPerspective()" class="member-name-link">isRenderingPerspective</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,net.minecraft.world.entity.Entity,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker)" class="member-name-link">render</a><wbr>(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,net.minecraft.world.entity.Entity,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker,boolean)" class="member-name-link">render</a><wbr>(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
  @Nullable net.minecraft.world.entity.Entity&nbsp;cameraEntity,
  org.joml.Matrix4fc&nbsp;modelView,
  org.joml.Matrix4fc&nbsp;projection,
  org.joml.Vector3dc&nbsp;cameraPosition,
  org.joml.Quaternionfc&nbsp;cameraOrientation,
  float&nbsp;renderDistance,
- net.minecraft.client.DeltaTracker&nbsp;deltaTracker)</code></div>
+ net.minecraft.client.DeltaTracker&nbsp;deltaTracker,
+ boolean&nbsp;drawLights)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Renders the level from another POV.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker)" class="member-name-link">render</a><wbr>(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker,boolean)" class="member-name-link">render</a><wbr>(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
  org.joml.Matrix4fc&nbsp;modelView,
  org.joml.Matrix4fc&nbsp;projection,
  org.joml.Vector3dc&nbsp;cameraPosition,
  org.joml.Quaternionfc&nbsp;cameraOrientation,
  float&nbsp;renderDistance,
- net.minecraft.client.DeltaTracker&nbsp;deltaTracker)</code></div>
+ net.minecraft.client.DeltaTracker&nbsp;deltaTracker,
+ boolean&nbsp;drawLights)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Renders the level from another POV.</div>
 </div>
@@ -151,15 +153,16 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker)">
+<section class="detail" id="render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker,boolean)">
 <h3>render</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
  org.joml.Matrix4fc&nbsp;modelView,
  org.joml.Matrix4fc&nbsp;projection,
  org.joml.Vector3dc&nbsp;cameraPosition,
  org.joml.Quaternionfc&nbsp;cameraOrientation,
  float&nbsp;renderDistance,
- net.minecraft.client.DeltaTracker&nbsp;deltaTracker)</span></div>
+ net.minecraft.client.DeltaTracker&nbsp;deltaTracker,
+ boolean&nbsp;drawLights)</span></div>
 <div class="block">Renders the level from another POV. Automatically prevents circular render references.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -170,13 +173,16 @@ loadScripts(document, 'script');</script>
 <dd><code>cameraOrientation</code> - The orientation of the camera</dd>
 <dd><code>renderDistance</code> - The chunk render distance</dd>
 <dd><code>deltaTracker</code> - The delta tracker instance</dd>
+<dd><code>drawLights</code> - Whether to draw lights to the scene after</dd>
+<dt>Returns:</dt>
+<dd>The full framebuffer including dynamic buffers. This framebuffer is owned by the render system</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,net.minecraft.world.entity.Entity,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker)">
+<section class="detail" id="render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,net.minecraft.world.entity.Entity,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker,boolean)">
 <h3>render</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(<a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
  @Nullable
  @Nullable net.minecraft.world.entity.Entity&nbsp;cameraEntity,
  org.joml.Matrix4fc&nbsp;modelView,
@@ -184,18 +190,22 @@ loadScripts(document, 'script');</script>
  org.joml.Vector3dc&nbsp;cameraPosition,
  org.joml.Quaternionfc&nbsp;cameraOrientation,
  float&nbsp;renderDistance,
- net.minecraft.client.DeltaTracker&nbsp;deltaTracker)</span></div>
+ net.minecraft.client.DeltaTracker&nbsp;deltaTracker,
+ boolean&nbsp;drawLights)</span></div>
 <div class="block">Renders the level from another POV. Automatically prevents circular render references.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>framebuffer</code> - The framebuffer to draw into</dd>
-<dd><code>cameraEntity</code> - The entity to draw the camera in relation to. If unsure use <a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker)"><code>render(AdvancedFbo, Matrix4fc, Matrix4fc, Vector3dc, Quaternionfc, float, DeltaTracker)</code></a></dd>
+<dd><code>cameraEntity</code> - The entity to draw the camera in relation to. If unsure use <a href="#render(foundry.veil.api.client.render.framebuffer.AdvancedFbo,org.joml.Matrix4fc,org.joml.Matrix4fc,org.joml.Vector3dc,org.joml.Quaternionfc,float,net.minecraft.client.DeltaTracker,boolean)"><code>render(AdvancedFbo, Matrix4fc, Matrix4fc, Vector3dc, Quaternionfc, float, DeltaTracker, boolean)</code></a></dd>
 <dd><code>modelView</code> - The base modelview matrix</dd>
 <dd><code>projection</code> - The projection matrix</dd>
 <dd><code>cameraPosition</code> - The position of the camera</dd>
 <dd><code>cameraOrientation</code> - The orientation of the camera</dd>
 <dd><code>renderDistance</code> - The chunk render distance</dd>
 <dd><code>deltaTracker</code> - The delta tracker instance</dd>
+<dd><code>drawLights</code> - Whether to draw lights to the scene after</dd>
+<dt>Returns:</dt>
+<dd>The full framebuffer including dynamic buffers. This framebuffer is owned by the render system</dd>
 </dl>
 </section>
 </li>
