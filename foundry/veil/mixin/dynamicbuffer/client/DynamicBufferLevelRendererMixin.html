@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DynamicBufferLevelRendererMixin</span>
+<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">DynamicBufferLevelRendererMixin</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 </section>
 <section class="summary">
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -128,13 +128,27 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#blit(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">blit</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endOpaque(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">endOpaque</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearState(net.minecraft.client.renderer.RenderStateShard.OutputStateShard,com.llamalad7.mixinextras.injector.wrapoperation.Operation)" class="member-name-link">clearState</a><wbr>(net.minecraft.client.renderer.RenderStateShard.OutputStateShard&nbsp;instance,
+ com.llamalad7.mixinextras.injector.wrapoperation.Operation&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;&nbsp;original)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRainBlend(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">setRainBlend</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endOpaque(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">endOpaque</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract @Nullable com.mojang.blaze3d.pipeline.RenderTarget</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParticlesTarget()" class="member-name-link">getParticlesTarget</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract @Nullable com.mojang.blaze3d.pipeline.RenderTarget</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWeatherTarget()" class="member-name-link">getWeatherTarget</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRainBlend(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">setRainBlend</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupOpaque(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">setupOpaque</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupOpaque(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">setupOpaque</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupState(net.minecraft.client.renderer.RenderStateShard.OutputStateShard,com.llamalad7.mixinextras.injector.wrapoperation.Operation)" class="member-name-link">setupState</a><wbr>(net.minecraft.client.renderer.RenderStateShard.OutputStateShard&nbsp;instance,
+ com.llamalad7.mixinextras.injector.wrapoperation.Operation&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;&nbsp;original)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -168,6 +182,20 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getWeatherTarget()">
+<h3>getWeatherTarget</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">@Nullable com.mojang.blaze3d.pipeline.RenderTarget</span>&nbsp;<span class="element-name">getWeatherTarget</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getParticlesTarget()">
+<h3>getParticlesTarget</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">@Nullable com.mojang.blaze3d.pipeline.RenderTarget</span>&nbsp;<span class="element-name">getParticlesTarget</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="setupOpaque(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)">
 <h3>setupOpaque</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupOpaque</span><wbr><span class="parameters">(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</span></div>
@@ -178,6 +206,20 @@ loadScripts(document, 'script');</script>
 <h3>bindWrite</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">bindWrite</span><wbr><span class="parameters">(com.mojang.blaze3d.pipeline.RenderTarget&nbsp;instance,
  boolean&nbsp;setViewport,
+ com.llamalad7.mixinextras.injector.wrapoperation.Operation&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;&nbsp;original)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setupState(net.minecraft.client.renderer.RenderStateShard.OutputStateShard,com.llamalad7.mixinextras.injector.wrapoperation.Operation)">
+<h3>setupState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupState</span><wbr><span class="parameters">(net.minecraft.client.renderer.RenderStateShard.OutputStateShard&nbsp;instance,
+ com.llamalad7.mixinextras.injector.wrapoperation.Operation&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;&nbsp;original)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearState(net.minecraft.client.renderer.RenderStateShard.OutputStateShard,com.llamalad7.mixinextras.injector.wrapoperation.Operation)">
+<h3>clearState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearState</span><wbr><span class="parameters">(net.minecraft.client.renderer.RenderStateShard.OutputStateShard&nbsp;instance,
  com.llamalad7.mixinextras.injector.wrapoperation.Operation&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;&nbsp;original)</span></div>
 </section>
 </li>
