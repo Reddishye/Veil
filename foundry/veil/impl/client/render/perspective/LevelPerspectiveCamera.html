@@ -143,19 +143,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderDistance()" class="member-name-link">getRenderDistance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setup(org.joml.Vector3dc,net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,org.joml.Quaternionfc,float)" class="member-name-link">setup</a><wbr>(org.joml.Vector3dc&nbsp;position,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isDetached()" class="member-name-link">isDetached</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setup(org.joml.Vector3dc,net.minecraft.world.entity.Entity,net.minecraft.client.multiplayer.ClientLevel,org.joml.Quaternionfc,float)" class="member-name-link">setup</a><wbr>(org.joml.Vector3dc&nbsp;position,
  @Nullable net.minecraft.world.entity.Entity&nbsp;cameraEntity,
  net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
  org.joml.Quaternionfc&nbsp;orientation,
  float&nbsp;viewDistance)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.Camera">Methods inherited from class&nbsp;net.minecraft.client.Camera</h3>
-<code>getBlockPosition, getEntity, getFluidInCamera, getLeftVector, getLookVector, getNearPlane, getPartialTickTime, getPosition, getUpVector, getXRot, getYRot, isDetached, isInitialized, move, reset, rotation, setPosition, setPosition, setRotation, setup, tick</code></div>
+<code>getBlockPosition, getEntity, getFluidInCamera, getLeftVector, getLookVector, getNearPlane, getPartialTickTime, getPosition, getUpVector, getXRot, getYRot, isInitialized, move, reset, rotation, setPosition, setPosition, setRotation, setup, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -193,6 +196,16 @@ loadScripts(document, 'script');</script>
  net.minecraft.client.multiplayer.ClientLevel&nbsp;level,
  org.joml.Quaternionfc&nbsp;orientation,
  float&nbsp;viewDistance)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="isDetached()">
+<h3>isDetached</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isDetached</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>isDetached</code>&nbsp;in class&nbsp;<code>net.minecraft.client.Camera</code></dd>
+</dl>
 </section>
 </li>
 <li>
