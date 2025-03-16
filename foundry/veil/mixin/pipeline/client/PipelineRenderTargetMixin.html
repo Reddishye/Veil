@@ -113,10 +113,16 @@ implements <a href="../../../ext/RenderTargetExtension.html" title="interface in
 <div class="col-second even-row-color"><code><a href="#frameBufferId" class="member-name-link">frameBufferId</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>int</code></div>
-<div class="col-second odd-row-color"><code><a href="#viewHeight" class="member-name-link">viewHeight</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#height" class="member-name-link">height</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>int</code></div>
-<div class="col-second even-row-color"><code><a href="#viewWidth" class="member-name-link">viewWidth</a></code></div>
+<div class="col-second even-row-color"><code><a href="#viewHeight" class="member-name-link">viewHeight</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>int</code></div>
+<div class="col-second odd-row-color"><code><a href="#viewWidth" class="member-name-link">viewWidth</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>int</code></div>
+<div class="col-second even-row-color"><code><a href="#width" class="member-name-link">width</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -159,20 +165,11 @@ implements <a href="../../../ext/RenderTargetExtension.html" title="interface in
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDepthTextureId(org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable)" class="member-name-link">getDepthTextureId</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;cir)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$getFramebuffer()" class="member-name-link">veil$getFramebuffer</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$getHeight()" class="member-name-link">veil$getHeight</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$getTexture(int)" class="member-name-link">veil$getTexture</a><wbr>(int&nbsp;buffer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$getWidth()" class="member-name-link">veil$getWidth</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$setWrapper(foundry.veil.api.client.render.framebuffer.AdvancedFbo)" class="member-name-link">veil$setWrapper</a><wbr>(@Nullable <a href="../../../api/client/render/framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;fbo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#veil$setWrapper(foundry.veil.api.client.render.framebuffer.AdvancedFbo)" class="member-name-link">veil$setWrapper</a><wbr>(@Nullable <a href="../../../api/client/render/framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;fbo)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -194,6 +191,18 @@ implements <a href="../../../ext/RenderTargetExtension.html" title="interface in
 <section class="detail" id="frameBufferId">
 <h3>frameBufferId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">frameBufferId</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="width">
+<h3>width</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">width</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="height">
+<h3>height</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">height</span></div>
 </section>
 </li>
 <li>
@@ -242,42 +251,12 @@ implements <a href="../../../ext/RenderTargetExtension.html" title="interface in
 </section>
 </li>
 <li>
-<section class="detail" id="veil$getFramebuffer()">
-<h3>veil$getFramebuffer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">veil$getFramebuffer</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../ext/RenderTargetExtension.html#veil$getFramebuffer()">veil$getFramebuffer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ext/RenderTargetExtension.html" title="interface in foundry.veil.ext">RenderTargetExtension</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="veil$getTexture(int)">
 <h3>veil$getTexture</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">veil$getTexture</span><wbr><span class="parameters">(int&nbsp;buffer)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../ext/RenderTargetExtension.html#veil$getTexture(int)">veil$getTexture</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ext/RenderTargetExtension.html" title="interface in foundry.veil.ext">RenderTargetExtension</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="veil$getWidth()">
-<h3>veil$getWidth</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">veil$getWidth</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../ext/RenderTargetExtension.html#veil$getWidth()">veil$getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ext/RenderTargetExtension.html" title="interface in foundry.veil.ext">RenderTargetExtension</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="veil$getHeight()">
-<h3>veil$getHeight</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">veil$getHeight</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../ext/RenderTargetExtension.html#veil$getHeight()">veil$getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ext/RenderTargetExtension.html" title="interface in foundry.veil.ext">RenderTargetExtension</a></code></dd>
 </dl>
 </section>
 </li>
