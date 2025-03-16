@@ -138,14 +138,20 @@ implements <a href="../../../ext/LevelRendererExtension.html" title="interface i
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initTransparency(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">initTransparency</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#renderSectionLayer(net.minecraft.client.renderer.RenderType,double,double,double,org.joml.Matrix4f,org.joml.Matrix4f)" class="member-name-link">renderSectionLayer</a><wbr>(net.minecraft.client.renderer.RenderType&nbsp;pRenderType,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadFramebuffer(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">loadFramebuffer</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#renderSectionLayer(net.minecraft.client.renderer.RenderType,double,double,double,org.joml.Matrix4f,org.joml.Matrix4f)" class="member-name-link">renderSectionLayer</a><wbr>(net.minecraft.client.renderer.RenderType&nbsp;pRenderType,
  double&nbsp;pX,
  double&nbsp;pY,
  double&nbsp;pZ,
  org.joml.Matrix4f&nbsp;pFrustrumMatrix,
  org.joml.Matrix4f&nbsp;pProjectionMatrix)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveFramebuffer(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">saveFramebuffer</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRainBlend(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)" class="member-name-link">setRainBlend</a><wbr>(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -212,6 +218,18 @@ implements <a href="../../../ext/LevelRendererExtension.html" title="interface i
  double&nbsp;pZ,
  org.joml.Matrix4f&nbsp;pFrustrumMatrix,
  org.joml.Matrix4f&nbsp;pProjectionMatrix)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="saveFramebuffer(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)">
+<h3>saveFramebuffer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveFramebuffer</span><wbr><span class="parameters">(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="loadFramebuffer(org.spongepowered.asm.mixin.injection.callback.CallbackInfo)">
+<h3>loadFramebuffer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadFramebuffer</span><wbr><span class="parameters">(org.spongepowered.asm.mixin.injection.callback.CallbackInfo&nbsp;ci)</span></div>
 </section>
 </li>
 <li>
