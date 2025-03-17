@@ -92,10 +92,6 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><code>T</code> - The type of object to serialize</dd>
-</dl>
-<dl class="notes">
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;T&gt;</code>, <code><a href="../../../../../api/client/render/shader/block/ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">ShaderBlock</a>&lt;T&gt;</code>, <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code>org.lwjgl.system.NativeResource</code></dd>
 </dl>
@@ -104,7 +100,6 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">DynamicShaderBlockImpl&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="ShaderBlockImpl.html" title="class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl</a>&lt;T&gt;
 implements <a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;T&gt;</span></div>
-<div class="block">Dynamic-size implementation of <a href="../../../../../api/client/render/shader/block/ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block"><code>ShaderBlock</code></a>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -112,21 +107,9 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <li>
 <section class="nested-class-summary" id="nested-class-summary">
 <h2>Nested Class Summary</h2>
-<div class="caption"><span>Nested Classes</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Class</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="DynamicShaderBlockImpl.DSASerializer.html" class="type-name-link" title="class in foundry.veil.impl.client.render.shader.block">DynamicShaderBlockImpl.DSASerializer</a>&lt;<a href="DynamicShaderBlockImpl.DSASerializer.html" title="type parameter in DynamicShaderBlockImpl.DSASerializer">T</a>&gt;</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="DynamicShaderBlockImpl.LegacySerializer.html" class="type-name-link" title="class in foundry.veil.impl.client.render.shader.block">DynamicShaderBlockImpl.LegacySerializer</a>&lt;<a href="DynamicShaderBlockImpl.LegacySerializer.html" title="type parameter in DynamicShaderBlockImpl.LegacySerializer">T</a>&gt;</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="DynamicShaderBlockImpl.Serializer.html" class="type-name-link" title="interface in foundry.veil.impl.client.render.shader.block">DynamicShaderBlockImpl.Serializer</a>&lt;<a href="DynamicShaderBlockImpl.Serializer.html" title="type parameter in DynamicShaderBlockImpl.Serializer">T</a>&gt;</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-</div>
+<div class="inherited-list">
+<h2 id="nested-classes-inherited-from-class-foundry.veil.impl.client.render.shader.block.ShaderBlockImpl">Nested classes/interfaces inherited from class&nbsp;foundry.veil.impl.client.render.shader.block.<a href="ShaderBlockImpl.html" title="class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl</a></h2>
+<code><a href="ShaderBlockImpl.StorageType.html" title="enum class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl.StorageType</a></code></div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-foundry.veil.api.client.render.shader.block.ShaderBlock">Nested classes/interfaces inherited from interface&nbsp;foundry.veil.api.client.render.shader.block.<a href="../../../../../api/client/render/shader/block/ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">ShaderBlock</a></h2>
 <code><a href="../../../../../api/client/render/shader/block/ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>, <a href="../../../../../api/client/render/shader/block/ShaderBlock.MemoryLayout.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.MemoryLayout</a></code></div>
@@ -149,9 +132,9 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,foundry.veil.impl.client.render.shader.block.DynamicShaderBlockImpl.Serializer)" class="member-name-link">DynamicShaderBlockImpl</a><wbr>(<a href="../../../../../api/client/render/shader/block/ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;initialSize,
- <a href="DynamicShaderBlockImpl.Serializer.html" title="interface in foundry.veil.impl.client.render.shader.block">DynamicShaderBlockImpl.Serializer</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;&nbsp;serializer)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)" class="member-name-link">DynamicShaderBlockImpl</a><wbr>(<a href="../../../../../api/client/render/shader/block/ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
+ int&nbsp;initialSize,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -172,17 +155,20 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Binds this block to the specified index.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#free()" class="member-name-link">free</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSize(long)" class="member-name-link">setSize</a><wbr>(long&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSize(int)" class="member-name-link">setSize</a><wbr>(int&nbsp;size)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Resizes this shader block to match the new size.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unbind(int)" class="member-name-link">unbind</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unbind(int)" class="member-name-link">unbind</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unbinds this block from the specified index.</div>
 </div>
 </div>
@@ -190,13 +176,13 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.impl.client.render.shader.block.ShaderBlockImpl">Methods inherited from class&nbsp;foundry.veil.impl.client.render.shader.block.<a href="ShaderBlockImpl.html" title="class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl</a></h3>
-<code><a href="ShaderBlockImpl.html#free()">free</a>, <a href="ShaderBlockImpl.html#getBinding()">getBinding</a>, <a href="ShaderBlockImpl.html#getIndex()">getIndex</a>, <a href="ShaderBlockImpl.html#getValue()">getValue</a>, <a href="ShaderBlockImpl.html#set(T)">set</a>, <a href="ShaderBlockImpl.html#setIndex(int)">setIndex</a></code></div>
+<code><a href="ShaderBlockImpl.html#getBinding()">getBinding</a>, <a href="ShaderBlockImpl.html#getIndex()">getIndex</a>, <a href="ShaderBlockImpl.html#getStorageType()">getStorageType</a>, <a href="ShaderBlockImpl.html#getValue()">getValue</a>, <a href="ShaderBlockImpl.html#set(T)">set</a>, <a href="ShaderBlockImpl.html#setIndex(int)">setIndex</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.lwjgl.system.NativeResource">Methods inherited from interface&nbsp;org.lwjgl.system.NativeResource</h3>
-<code>close, free</code></div>
+<code>close</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.block.ShaderBlock">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.block.<a href="../../../../../api/client/render/shader/block/ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">ShaderBlock</a></h3>
 <code><a href="../../../../../api/client/render/shader/block/ShaderBlock.html#getValue()">getValue</a>, <a href="../../../../../api/client/render/shader/block/ShaderBlock.html#set(T)">set</a>, <a href="../../../../../api/client/render/shader/block/ShaderBlock.html#update(T)">update</a></code></div>
@@ -212,11 +198,11 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,foundry.veil.impl.client.render.shader.block.DynamicShaderBlockImpl.Serializer)">
+<section class="detail" id="&lt;init&gt;(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)">
 <h3>DynamicShaderBlockImpl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DynamicShaderBlockImpl</span><wbr><span class="parameters">(<a href="../../../../../api/client/render/shader/block/ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;initialSize,
- <a href="DynamicShaderBlockImpl.Serializer.html" title="interface in foundry.veil.impl.client.render.shader.block">DynamicShaderBlockImpl.Serializer</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;&nbsp;serializer)</span></div>
+ int&nbsp;initialSize,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</span></div>
 </section>
 </li>
 </ul>
@@ -230,7 +216,7 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <li>
 <section class="detail" id="getSize()">
 <h3>getSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getSize</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSize</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html#getSize()">getSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;</code></dd>
@@ -240,14 +226,14 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 </section>
 </li>
 <li>
-<section class="detail" id="setSize(long)">
+<section class="detail" id="setSize(int)">
 <h3>setSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSize</span><wbr><span class="parameters">(long&nbsp;size)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html#setSize(long)">DynamicShaderBlock</a></code></span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSize</span><wbr><span class="parameters">(int&nbsp;size)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html#setSize(int)">DynamicShaderBlock</a></code></span></div>
 <div class="block">Resizes this shader block to match the new size.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html#setSize(long)">setSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html#setSize(int)">setSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/block/DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>size</code> - The size in bytes</dd>
 </dl>
@@ -278,6 +264,18 @@ implements <a href="../../../../../api/client/render/shader/block/DynamicShaderB
 <dd><code><a href="ShaderBlockImpl.html#unbind(int)">unbind</a></code>&nbsp;in class&nbsp;<code><a href="ShaderBlockImpl.html" title="class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - The index to unbind this block from</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="free()">
+<h3>free</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">free</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>free</code>&nbsp;in interface&nbsp;<code>org.lwjgl.system.NativeResource</code></dd>
+<dt>Overrides:</dt>
+<dd><code><a href="ShaderBlockImpl.html#free()">free</a></code>&nbsp;in class&nbsp;<code><a href="ShaderBlockImpl.html" title="class in foundry.veil.impl.client.render.shader.block">ShaderBlockImpl</a>&lt;<a href="DynamicShaderBlockImpl.html" title="type parameter in DynamicShaderBlockImpl">T</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

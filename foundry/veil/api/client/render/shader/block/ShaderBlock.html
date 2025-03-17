@@ -146,8 +146,8 @@ extends org.lwjgl.system.NativeResource</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static &lt;T&gt;&nbsp;<a href="DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#dynamic(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,java.util.function.BiConsumer)" class="member-name-link">dynamic</a><wbr>(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;initialSize,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#dynamic(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)" class="member-name-link">dynamic</a><wbr>(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
+ int&nbsp;initialSize,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Creates a new shader block with a dynamically-changing size.</div>
@@ -172,8 +172,8 @@ extends org.lwjgl.system.NativeResource</span></div>
 <div class="block">Sets the value of this block.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static &lt;T&gt;&nbsp;<a href="ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">ShaderBlock</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#withSize(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,java.util.function.BiConsumer)" class="member-name-link">withSize</a><wbr>(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;size,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#withSize(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)" class="member-name-link">withSize</a><wbr>(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
+ int&nbsp;size,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Creates a new shader block with a fixed size.</div>
@@ -202,10 +202,10 @@ extends org.lwjgl.system.NativeResource</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="withSize(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,java.util.function.BiConsumer)">
+<section class="detail" id="withSize(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)">
 <h3>withSize</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="ShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">ShaderBlock</a>&lt;T&gt;</span>&nbsp;<span class="element-name">withSize</span><wbr><span class="parameters">(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;size,
+ int&nbsp;size,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</span></div>
 <div class="block">Creates a new shader block with a fixed size.</div>
 <dl class="notes">
@@ -238,10 +238,10 @@ extends org.lwjgl.system.NativeResource</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="dynamic(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,long,java.util.function.BiConsumer)">
+<section class="detail" id="dynamic(foundry.veil.api.client.render.shader.block.ShaderBlock.BufferBinding,int,java.util.function.BiConsumer)">
 <h3>dynamic</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="DynamicShaderBlock.html" title="interface in foundry.veil.api.client.render.shader.block">DynamicShaderBlock</a>&lt;T&gt;</span>&nbsp;<span class="element-name">dynamic</span><wbr><span class="parameters">(<a href="ShaderBlock.BufferBinding.html" title="enum class in foundry.veil.api.client.render.shader.block">ShaderBlock.BufferBinding</a>&nbsp;binding,
- long&nbsp;initialSize,
+ int&nbsp;initialSize,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&gt;&nbsp;serializer)</span></div>
 <div class="block">Creates a new shader block with a dynamically-changing size.</div>
 <dl class="notes">
