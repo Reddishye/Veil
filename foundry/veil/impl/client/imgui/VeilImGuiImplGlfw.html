@@ -38,8 +38,8 @@ loadScripts(document, 'script');</script>
 <li>
 <p>Summary:</p>
 <ul>
-<li>Nested</li>
-<li>Field</li>
+<li><a href="#nested-class-summary">Nested</a></li>
+<li><a href="#field-summary">Field</a></li>
 <li><a href="#constructor-summary">Constr</a></li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -58,8 +58,8 @@ loadScripts(document, 'script');</script>
 <div id="navbar-sub-list">
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
@@ -86,21 +86,44 @@ loadScripts(document, 'script');</script>
 <h1 title="Class VeilImGuiImplGlfw" class="title">Class VeilImGuiImplGlfw</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance">imgui.glfw.ImGuiImplGlfw
 <div class="inheritance">foundry.veil.impl.client.imgui.VeilImGuiImplGlfw</div>
 </div>
+</div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code>org.lwjgl.system.NativeResource</code></dd>
-</dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Internal
-</span><span class="modifiers">public class </span><span class="element-name type-name-label">VeilImGuiImplGlfw</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements org.lwjgl.system.NativeResource</span></div>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VeilImGuiImplGlfw</span>
+<span class="extends-implements">extends imgui.glfw.ImGuiImplGlfw</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>protected static class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="VeilImGuiImplGlfw.VeilData.html" class="type-name-link" title="class in foundry.veil.impl.client.imgui">VeilImGuiImplGlfw.VeilData</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+<div class="inherited-list">
+<h2 id="nested-classes-inherited-from-class-imgui.glfw.ImGuiImplGlfw">Nested classes/interfaces inherited from class&nbsp;imgui.glfw.ImGuiImplGlfw</h2>
+<code>imgui.glfw.ImGuiImplGlfw.Data</code></div>
+</section>
+</li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-imgui.glfw.ImGuiImplGlfw">Fields inherited from class&nbsp;imgui.glfw.ImGuiImplGlfw</h3>
+<code>data, IS_APPLE, IS_WINDOWS, OS</code></div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -126,78 +149,62 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#charCallback(long,int)" class="member-name-link">charCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#charCallback(long,int)" class="member-name-link">charCallback</a><wbr>(long&nbsp;window,
  int&nbsp;c)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWCharCallback</code>.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorEnterCallback(long,boolean)" class="member-name-link">cursorEnterCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorEnterCallback(long,boolean)" class="member-name-link">cursorEnterCallback</a><wbr>(long&nbsp;window,
  boolean&nbsp;entered)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWCursorEnterCallback</code>.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#free()" class="member-name-link">free</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to restore <code>GLFW</code> to it's state prior to calling method <code>ImGuiImplGlfw.init(long, boolean)</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#init(long,boolean)" class="member-name-link">init</a><wbr>(long&nbsp;windowId,
- boolean&nbsp;installCallbacks)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to do an initialization of the <code>ImGuiImplGlfw</code> state.</div>
-</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cursorPosCallback(long,double,double)" class="member-name-link">cursorPosCallback</a><wbr>(long&nbsp;window,
+ double&nbsp;x,
+ double&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected imgui.callback.ImStrSupplier</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClipboardTextFn()" class="member-name-link">getClipboardTextFn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#keyCallback(long,int,int,int,int)" class="member-name-link">keyCallback</a><wbr>(long&nbsp;windowId,
- int&nbsp;key,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#keyCallback(long,int,int,int,int)" class="member-name-link">keyCallback</a><wbr>(long&nbsp;window,
+ int&nbsp;keycode,
  int&nbsp;scancode,
  int&nbsp;action,
  int&nbsp;mods)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWKeyCallback</code>.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#monitorCallback(long,int)" class="member-name-link">monitorCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#monitorCallback(long,int)" class="member-name-link">monitorCallback</a><wbr>(long&nbsp;window,
  int&nbsp;event)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWMonitorCallback</code>.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mouseButtonCallback(long,int,int,int)" class="member-name-link">mouseButtonCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mouseButtonCallback(long,int,int,int)" class="member-name-link">mouseButtonCallback</a><wbr>(long&nbsp;window,
  int&nbsp;button,
  int&nbsp;action,
  int&nbsp;mods)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWMouseButtonCallback</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newFrame()" class="member-name-link">newFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Updates <code>ImGuiIO</code> and <code>GLFW</code> state.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected imgui.glfw.ImGuiImplGlfw.Data</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newData()" class="member-name-link">newData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scrollCallback(long,double,double)" class="member-name-link">scrollCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scrollCallback(long,double,double)" class="member-name-link">scrollCallback</a><wbr>(long&nbsp;window,
  double&nbsp;xOffset,
  double&nbsp;yOffset)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWScrollCallback</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#windowFocusCallback(long,boolean)" class="member-name-link">windowFocusCallback</a><wbr>(long&nbsp;windowId,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected imgui.callback.ImStrConsumer</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setClipboardTextFn()" class="member-name-link">setClipboardTextFn</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#windowFocusCallback(long,boolean)" class="member-name-link">windowFocusCallback</a><wbr>(long&nbsp;window,
  boolean&nbsp;focused)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Method to set the <code>GLFWWindowFocusCallback</code>.</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
-</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-imgui.glfw.ImGuiImplGlfw">Methods inherited from class&nbsp;imgui.glfw.ImGuiImplGlfw</h3>
+<code>freeCallback, glfwKeyToImGuiKey, init, initPlatformInterface, installCallbacks, keyToModifier, newFrame, restoreCallbacks, shutdown, shutdownPlatformInterface, translateUntranslatedKey, updateGamepads, updateKeyModifiers, updateMonitors, updateMouseCursor, updateMouseData</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-org.lwjgl.system.NativeResource">Methods inherited from interface&nbsp;org.lwjgl.system.NativeResource</h3>
-<code>close</code></div>
 </section>
 </li>
 </ul>
@@ -224,140 +231,127 @@ implements org.lwjgl.system.NativeResource</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getClipboardTextFn()">
+<h3>getClipboardTextFn</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">imgui.callback.ImStrSupplier</span>&nbsp;<span class="element-name">getClipboardTextFn</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>getClipboardTextFn</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setClipboardTextFn()">
+<h3>setClipboardTextFn</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">imgui.callback.ImStrConsumer</span>&nbsp;<span class="element-name">setClipboardTextFn</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>setClipboardTextFn</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="mouseButtonCallback(long,int,int,int)">
 <h3>mouseButtonCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">mouseButtonCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">mouseButtonCallback</span><wbr><span class="parameters">(long&nbsp;window,
  int&nbsp;button,
  int&nbsp;action,
  int&nbsp;mods)</span></div>
-<div class="block">Method to set the <code>GLFWMouseButtonCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>button</code> - clicked mouse button</dd>
-<dd><code>action</code> - click action type</dd>
-<dd><code>mods</code> - click modifiers</dd>
+<dt>Overrides:</dt>
+<dd><code>mouseButtonCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="scrollCallback(long,double,double)">
 <h3>scrollCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">scrollCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">scrollCallback</span><wbr><span class="parameters">(long&nbsp;window,
  double&nbsp;xOffset,
  double&nbsp;yOffset)</span></div>
-<div class="block">Method to set the <code>GLFWScrollCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>xOffset</code> - scroll offset by x-axis</dd>
-<dd><code>yOffset</code> - scroll offset by y-axis</dd>
+<dt>Overrides:</dt>
+<dd><code>scrollCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="keyCallback(long,int,int,int,int)">
 <h3>keyCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">keyCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
- int&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">keyCallback</span><wbr><span class="parameters">(long&nbsp;window,
+ int&nbsp;keycode,
  int&nbsp;scancode,
  int&nbsp;action,
  int&nbsp;mods)</span></div>
-<div class="block">Method to set the <code>GLFWKeyCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>key</code> - pressed key</dd>
-<dd><code>scancode</code> - key scancode</dd>
-<dd><code>action</code> - press action</dd>
-<dd><code>mods</code> - press modifiers</dd>
+<dt>Overrides:</dt>
+<dd><code>keyCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="windowFocusCallback(long,boolean)">
 <h3>windowFocusCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">windowFocusCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">windowFocusCallback</span><wbr><span class="parameters">(long&nbsp;window,
  boolean&nbsp;focused)</span></div>
-<div class="block">Method to set the <code>GLFWWindowFocusCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>focused</code> - is window focused</dd>
+<dt>Overrides:</dt>
+<dd><code>windowFocusCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="cursorPosCallback(long,double,double)">
+<h3>cursorPosCallback</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cursorPosCallback</span><wbr><span class="parameters">(long&nbsp;window,
+ double&nbsp;x,
+ double&nbsp;y)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>cursorPosCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="cursorEnterCallback(long,boolean)">
 <h3>cursorEnterCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cursorEnterCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">cursorEnterCallback</span><wbr><span class="parameters">(long&nbsp;window,
  boolean&nbsp;entered)</span></div>
-<div class="block">Method to set the <code>GLFWCursorEnterCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>entered</code> - is cursor entered</dd>
+<dt>Overrides:</dt>
+<dd><code>cursorEnterCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="charCallback(long,int)">
 <h3>charCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">charCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">charCallback</span><wbr><span class="parameters">(long&nbsp;window,
  int&nbsp;c)</span></div>
-<div class="block">Method to set the <code>GLFWCharCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>c</code> - pressed char</dd>
+<dt>Overrides:</dt>
+<dd><code>charCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="monitorCallback(long,int)">
 <h3>monitorCallback</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">monitorCallback</span><wbr><span class="parameters">(long&nbsp;windowId,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">monitorCallback</span><wbr><span class="parameters">(long&nbsp;window,
  int&nbsp;event)</span></div>
-<div class="block">Method to set the <code>GLFWMonitorCallback</code>.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>event</code> - monitor event type (ignored)</dd>
+<dt>Overrides:</dt>
+<dd><code>monitorCallback</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="init(long,boolean)">
-<h3>init</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">init</span><wbr><span class="parameters">(long&nbsp;windowId,
- boolean&nbsp;installCallbacks)</span></div>
-<div class="block">Method to do an initialization of the <code>ImGuiImplGlfw</code> state. It SHOULD be called before calling the <code>ImGuiImplGlfw.newFrame()</code> method.
- <p>
- Method takes two arguments, which should be a valid GLFW window pointer and a boolean indicating whether or not to install callbacks.</div>
+<section class="detail" id="newData()">
+<h3>newData</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">imgui.glfw.ImGuiImplGlfw.Data</span>&nbsp;<span class="element-name">newData</span>()</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>windowId</code> - pointer to the window</dd>
-<dd><code>installCallbacks</code> - should window callbacks be installed</dd>
-<dt>Returns:</dt>
-<dd>true if everything initialized</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="newFrame()">
-<h3>newFrame</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">newFrame</span>()</div>
-<div class="block">Updates <code>ImGuiIO</code> and <code>GLFW</code> state.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="free()">
-<h3>free</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">free</span>()</div>
-<div class="block">Method to restore <code>GLFW</code> to it's state prior to calling method <code>ImGuiImplGlfw.init(long, boolean)</code>.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>free</code>&nbsp;in interface&nbsp;<code>org.lwjgl.system.NativeResource</code></dd>
+<dt>Overrides:</dt>
+<dd><code>newData</code>&nbsp;in class&nbsp;<code>imgui.glfw.ImGuiImplGlfw</code></dd>
 </dl>
 </section>
 </li>

@@ -92,7 +92,7 @@ foundry.veil.mixin.debug.client
 foundry.veil.mixin.dynamicbuffer.accessor
 foundry.veil.mixin.dynamicbuffer.client
 foundry.veil.mixin.fix
-foundry.veil.mixin.framebuffer.client
+foundry.veil.mixin.framebuffer.accessor
 foundry.veil.mixin.imgui.client
 foundry.veil.mixin.necromancer.client
 foundry.veil.mixin.performance.client
