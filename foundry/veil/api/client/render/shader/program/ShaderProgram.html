@@ -106,7 +106,7 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -181,12 +181,22 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.minecraft.resources.ResourceLocation</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProgram()" class="member-name-link">getProgram</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>it.unimi.dsi.fastutil.ints.Int2ObjectMap<wbr>&lt;<a href="../compiler/CompiledShader.html" title="class in foundry.veil.api.client.render.shader.compiler">CompiledShader</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShaders()" class="member-name-link">getShaders</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrCreateShaderUniform(java.lang.CharSequence)" class="member-name-link">getOrCreateShaderUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a uniform by name or creates a reference to one that may exist in the future.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProgram()" class="member-name-link">getProgram</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>it.unimi.dsi.fastutil.ints.Int2ObjectMap<wbr>&lt;<a href="../compiler/CompiledShader.html" title="class in foundry.veil.api.client.render.shader.compiler">CompiledShader</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShaders()" class="member-name-link">getShaders</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShaderUniform(java.lang.CharSequence)" class="member-name-link">getShaderUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a uniform by name.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector2f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
  org.joml.Vector2f...&nbsp;values)</code></div>
@@ -405,10 +415,12 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Sets an array of integer vectors in the shader.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.minecraft.client.renderer.ShaderInstance</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toShaderInstance()" class="member-name-link">toShaderInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Wraps this shader with a vanilla Minecraft shader instance wrapper.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>net.minecraft.client.renderer.ShaderInstance</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#toShaderInstance()" class="member-name-link">toShaderInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../../VeilRenderBridge.html#toShaderInstance(foundry.veil.api.client.render.shader.program.ShaderProgram)"><code>VeilRenderBridge.toShaderInstance(ShaderProgram)</code></a></div>
+</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#unbind()" class="member-name-link">unbind</a>()</code></div>
@@ -429,7 +441,7 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <code><a href="TextureUniformAccess.html#bindSamplers(int)">bindSamplers</a>, <a href="TextureUniformAccess.html#bindSamplers(foundry.veil.api.client.render.shader.texture.ShaderTextureSource.Context,int)">bindSamplers</a>, <a href="TextureUniformAccess.html#clearSamplers()">clearSamplers</a>, <a href="TextureUniformAccess.html#removeSampler(java.lang.CharSequence)">removeSampler</a>, <a href="TextureUniformAccess.html#setFramebufferSamplers(foundry.veil.api.client.render.framebuffer.AdvancedFbo)">setFramebufferSamplers</a>, <a href="TextureUniformAccess.html#setSampler(java.lang.CharSequence,int)">setSampler</a>, <a href="TextureUniformAccess.html#setSampler(java.lang.CharSequence,int,int)">setSampler</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.program.UniformAccess">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.program.<a href="UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></h3>
-<code><a href="UniformAccess.html#getStorageBlock(java.lang.CharSequence)">getStorageBlock</a>, <a href="UniformAccess.html#getUniform(java.lang.CharSequence)">getUniform</a>, <a href="UniformAccess.html#getUniformBlock(java.lang.CharSequence)">getUniformBlock</a>, <a href="UniformAccess.html#hasStorageBlock(java.lang.CharSequence)">hasStorageBlock</a>, <a href="UniformAccess.html#hasUniform(java.lang.CharSequence)">hasUniform</a>, <a href="UniformAccess.html#hasUniformBlock(java.lang.CharSequence)">hasUniformBlock</a></code></div>
+<code><a href="UniformAccess.html#getShaderUniformSafe(java.lang.CharSequence)">getShaderUniformSafe</a>, <a href="UniformAccess.html#getStorageBlock(java.lang.CharSequence)">getStorageBlock</a>, <a href="UniformAccess.html#getUniform(java.lang.CharSequence)">getUniform</a>, <a href="UniformAccess.html#getUniformBlock(java.lang.CharSequence)">getUniformBlock</a>, <a href="UniformAccess.html#hasStorageBlock(java.lang.CharSequence)">hasStorageBlock</a>, <a href="UniformAccess.html#hasUniform(java.lang.CharSequence)">hasUniform</a>, <a href="UniformAccess.html#hasUniformBlock(java.lang.CharSequence)">hasUniformBlock</a></code></div>
 </section>
 </li>
 </ul>
@@ -488,6 +500,38 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The OpenGL id of this program</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShaderUniform(java.lang.CharSequence)">
+<h3>getShaderUniform</h3>
+<div class="member-signature"><span class="return-type"><a href="../uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></span>&nbsp;<span class="element-name">getShaderUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="UniformAccess.html#getShaderUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
+<div class="block">Retrieves a uniform by name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="UniformAccess.html#getShaderUniform(java.lang.CharSequence)">getShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dt>Returns:</dt>
+<dd>The uniform with that name or <code>null</code> if the uniform does not exist</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrCreateShaderUniform(java.lang.CharSequence)">
+<h3>getOrCreateShaderUniform</h3>
+<div class="member-signature"><span class="return-type"><a href="../uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></span>&nbsp;<span class="element-name">getOrCreateShaderUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="UniformAccess.html#getOrCreateShaderUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
+<div class="block">Retrieves a uniform by name or creates a reference to one that may exist in the future.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="UniformAccess.html#getOrCreateShaderUniform(java.lang.CharSequence)">getOrCreateShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dt>Returns:</dt>
+<dd>The uniform instance</dd>
 </dl>
 </section>
 </li>
@@ -1233,7 +1277,11 @@ extends org.lwjgl.system.NativeResource, <a href="MutableUniformAccess.html" tit
 <li>
 <section class="detail" id="toShaderInstance()">
 <h3>toShaderInstance</h3>
-<div class="member-signature"><span class="return-type">net.minecraft.client.renderer.ShaderInstance</span>&nbsp;<span class="element-name">toShaderInstance</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type">net.minecraft.client.renderer.ShaderInstance</span>&nbsp;<span class="element-name">toShaderInstance</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="../../VeilRenderBridge.html#toShaderInstance(foundry.veil.api.client.render.shader.program.ShaderProgram)"><code>VeilRenderBridge.toShaderInstance(ShaderProgram)</code></a></div>
+</div>
 <div class="block"><p>Wraps this shader with a vanilla Minecraft shader instance wrapper. There are a few special properties about the shader wrapper.</p>
  <ul>
      <li>The shader instance cannot be used to free the shader program. <code>NativeResource.free()</code> must be called separately.

@@ -27,6 +27,7 @@ foundry.veil.api.client.render.shader.compiler
 foundry.veil.api.client.render.shader.processor
 foundry.veil.api.client.render.shader.program
 foundry.veil.api.client.render.shader.texture
+foundry.veil.api.client.render.shader.uniform
 foundry.veil.api.client.render.texture
 foundry.veil.api.client.render.vertex
 foundry.veil.api.client.tooltip
@@ -77,6 +78,7 @@ foundry.veil.impl.client.render.shader.compiler
 foundry.veil.impl.client.render.shader.modifier
 foundry.veil.impl.client.render.shader.processor
 foundry.veil.impl.client.render.shader.program
+foundry.veil.impl.client.render.shader.uniform
 foundry.veil.impl.client.render.vertex
 foundry.veil.impl.client.render.wrapper
 foundry.veil.impl.compat.sodium

@@ -142,14 +142,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Creates a new shader state that points to the specified Veil shader name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#wrap(com.mojang.blaze3d.pipeline.RenderTarget)" class="member-name-link">wrap</a><wbr>(com.mojang.blaze3d.pipeline.RenderTarget&nbsp;renderTarget)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static net.minecraft.client.renderer.ShaderInstance</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#toShaderInstance(foundry.veil.api.client.render.shader.program.ShaderProgram)" class="member-name-link">toShaderInstance</a><wbr>(<a href="shader/program/ShaderProgram.html" title="interface in foundry.veil.api.client.render.shader.program">ShaderProgram</a>&nbsp;program)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">Wraps the specified render target in a new advanced fbo.</div>
+<div class="block">Wraps the specified shader with a vanilla Minecraft shader instance wrapper.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#wrap(java.util.function.Supplier)" class="member-name-link">wrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;com.mojang.blaze3d.pipeline.RenderTarget&gt;&nbsp;renderTargetSupplier)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#wrap(com.mojang.blaze3d.pipeline.RenderTarget)" class="member-name-link">wrap</a><wbr>(com.mojang.blaze3d.pipeline.RenderTarget&nbsp;renderTarget)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">Wraps the specified render target in a new advanced fbo.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#wrap(java.util.function.Supplier)" class="member-name-link">wrap</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;com.mojang.blaze3d.pipeline.RenderTarget&gt;&nbsp;renderTargetSupplier)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Wraps the specified render target in a new advanced fbo.</div>
 </div>
 </div>
@@ -165,6 +170,27 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="toShaderInstance(foundry.veil.api.client.render.shader.program.ShaderProgram)">
+<h3>toShaderInstance</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">net.minecraft.client.renderer.ShaderInstance</span>&nbsp;<span class="element-name">toShaderInstance</span><wbr><span class="parameters">(<a href="shader/program/ShaderProgram.html" title="interface in foundry.veil.api.client.render.shader.program">ShaderProgram</a>&nbsp;program)</span></div>
+<div class="block"><p>Wraps the specified shader with a vanilla Minecraft shader instance wrapper. There are a few special properties about the shader wrapper.</p>
+ <ul>
+     <li>The shader instance cannot be used to free the shader program. <code>NativeResource.free()</code> must be called separately.
+     If the shader is loaded through <a href="shader/ShaderManager.html" title="class in foundry.veil.api.client.render.shader"><code>ShaderManager</code></a> then there is no need to free the shader.</li>
+     <li>Calling <code>Uniform.upload()</code> will do nothing since the values are uploaded when the appropriate methods are called</li>
+     <li>Uniforms are lazily wrapped and will not crash when the wrong method is called.</li>
+     <li><code>Uniform.set(int, float)</code> is not supported and will throw an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>.</li>
+     <li><code>Uniform.set(float[])</code> only works for 1, 2, 3, and 4 float elements. Any other size will throw an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/UnsupportedOperationException.html" title="class or interface in java.lang" class="external-link"><code>UnsupportedOperationException</code></a>.</li>
+ </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>program</code> - The program to create a shader instance from</dd>
+<dt>Returns:</dt>
+<dd>A lazily loaded shader instance wrapper for this program</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="create(net.minecraft.client.renderer.culling.Frustum)">
 <h3>create</h3>
