@@ -291,6 +291,12 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getShader()" class="member-name-link">getShader</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#gpuShaderFloat64BitSupported()" class="member-name-link">gpuShaderFloat64BitSupported</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#gpuShaderInt64BitSupported()" class="member-name-link">gpuShaderInt64BitSupported</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasImGui()" class="member-name-link">hasImGui</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
@@ -475,6 +481,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#updateActiveBuffers()" class="member-name-link">updateActiveBuffers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#vertexAttribute64BitSupported()" class="member-name-link">vertexAttribute64BitSupported</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -658,7 +667,7 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a target="_blank" href="http://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a></li>
+<li><a href="http://docs.gl/gl4/glMultiDrawElementsIndirect">Reference Page</a></li>
 </ul>
 </dd>
 </dl>
@@ -889,6 +898,36 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether <code>ARBMultiDrawIndirect</code> is supported</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="gpuShaderFloat64BitSupported()">
+<h3>gpuShaderFloat64BitSupported</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">gpuShaderFloat64BitSupported</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether <code>ARBGPUShaderFP64</code> is supported</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="gpuShaderInt64BitSupported()">
+<h3>gpuShaderInt64BitSupported</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">gpuShaderInt64BitSupported</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether <code>ARBGPUShaderInt64</code> is supported</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="vertexAttribute64BitSupported()">
+<h3>vertexAttribute64BitSupported</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">vertexAttribute64BitSupported</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether <code>ARBVertexAttrib64Bit</code> is supported</dd>
 </dl>
 </section>
 </li>
