@@ -95,8 +95,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../impl/client/render/shader/uniform/ShaderUniformImpl.html" title="class in foundry.veil.impl.client.render.shader.uniform">ShaderUniformImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Experimental
-</span><span class="modifiers">public interface </span><span class="element-name type-name-label">ShaderUniform</span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ShaderUniform</span><span class="extends-implements">
 extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span></div>
 <div class="block">A single uniform in a shader program.</div>
 </section>
@@ -113,7 +112,9 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="ShaderUniform.Type.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.shader.uniform">ShaderUniform.Type</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Possible uniform types that can be used.</div>
+</div>
 </div>
 </section>
 </li>
@@ -138,8 +139,85 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getArrayLength()" class="member-name-link">getArrayLength</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFloat()" class="member-name-link">getFloat</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the value of this uniform as a float.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default float[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getFloats()" class="member-name-link">getFloats</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Retrieves the values of this uniform as a float array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getFloats(float%5B%5D)" class="member-name-link">getFloats</a><wbr>(float[]&nbsp;fill)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFloats(float%5B%5D,int,int)" class="member-name-link">getFloats</a><wbr>(float[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInt()" class="member-name-link">getInt</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the value of this uniform as an integer.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default int[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getInts()" class="member-name-link">getInts</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Retrieves the values of this uniform as an int array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getInts(int%5B%5D)" class="member-name-link">getInts</a><wbr>(int[]&nbsp;fill)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Retrieves the values of this uniform as an int array and stores them in the specified array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInts(int%5B%5D,int,int)" class="member-name-link">getInts</a><wbr>(int[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the values of this uniform as a int array and stores them in the specified array.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix2f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix2f&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a matrix2x2 by the specified name</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix3f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3f&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a matrix3x3 by the specified name</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3x2f&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a matrix3x2 by the specified name</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix4f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4f&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a matrix4x4 by the specified name</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4x3f&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a matrix4x3 by the specified name</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
@@ -147,7 +225,43 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#invalidate()" class="member-name-link">invalidate</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector2f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2f...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector3f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3f...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector4f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4f...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector2i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2i...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector3i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3i...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector4i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4i...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#invalidateCache()" class="member-name-link">invalidateCache</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Invalidates the uniform cache.</div>
 </div>
@@ -159,7 +273,7 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.uniform.ShaderUniformAccess">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.uniform.<a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></h3>
-<code><a href="ShaderUniformAccess.html#setFloat(float)">setFloat</a>, <a href="ShaderUniformAccess.html#setFloats(float...)">setFloats</a>, <a href="ShaderUniformAccess.html#setInt(int)">setInt</a>, <a href="ShaderUniformAccess.html#setInts(int...)">setInts</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector2ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector3ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector4ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setVector(float%5B%5D)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float,float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector2fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector3fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector4fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVectorI(int%5B%5D)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int,int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector2ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector3ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector4ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector2fc...)">setVectors</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector3fc...)">setVectors</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector4fc...)">setVectors</a></code></div>
+<code><a href="ShaderUniformAccess.html#setFloat(float)">setFloat</a>, <a href="ShaderUniformAccess.html#setFloats(float...)">setFloats</a>, <a href="ShaderUniformAccess.html#setInt(int)">setInt</a>, <a href="ShaderUniformAccess.html#setInts(int...)">setInts</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector2ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector3ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setIVectors(org.joml.Vector4ic...)">setIVectors</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc,boolean)">setMatrix</a>, <a href="ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2dc)">setMatrix2x3</a>, <a href="ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2dc,boolean)">setMatrix2x3</a>, <a href="ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2fc)">setMatrix2x3</a>, <a href="ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2fc,boolean)">setMatrix2x3</a>, <a href="ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2dc)">setMatrix3x2</a>, <a href="ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2dc,boolean)">setMatrix3x2</a>, <a href="ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2fc)">setMatrix3x2</a>, <a href="ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2fc,boolean)">setMatrix3x2</a>, <a href="ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3dc)">setMatrix3x4</a>, <a href="ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3dc,boolean)">setMatrix3x4</a>, <a href="ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3fc)">setMatrix3x4</a>, <a href="ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3fc,boolean)">setMatrix3x4</a>, <a href="ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3dc)">setMatrix4x3</a>, <a href="ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3dc,boolean)">setMatrix4x3</a>, <a href="ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3fc)">setMatrix4x3</a>, <a href="ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3fc,boolean)">setMatrix4x3</a>, <a href="ShaderUniformAccess.html#setVector(float%5B%5D)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(float,float,float,float)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector2fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector3fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVector(org.joml.Vector4fc)">setVector</a>, <a href="ShaderUniformAccess.html#setVectorI(int%5B%5D)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(int,int,int,int)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector2ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector3ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectorI(org.joml.Vector4ic)">setVectorI</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector2fc...)">setVectors</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector3fc...)">setVectors</a>, <a href="ShaderUniformAccess.html#setVectors(org.joml.Vector4fc...)">setVectors</a></code></div>
 </section>
 </li>
 </ul>
@@ -172,9 +286,9 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="invalidate()">
-<h3>invalidate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">invalidate</span>()</div>
+<section class="detail" id="invalidateCache()">
+<h3>invalidateCache</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">invalidateCache</span>()</div>
 <div class="block">Invalidates the uniform cache.</div>
 </section>
 </li>
@@ -217,6 +331,255 @@ extends <a href="ShaderUniformAccess.html" title="interface in foundry.veil.api.
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The data type of this uniform in the shader</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getArrayLength()">
+<h3>getArrayLength</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getArrayLength</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The number of array elements in the uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloat()">
+<h3>getFloat</h3>
+<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getFloat</span>()</div>
+<div class="block">Retrieves the value of this uniform as a float.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The float value of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloats()">
+<h3>getFloats</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">float[]</span>&nbsp;<span class="element-name">getFloats</span>()</div>
+<div class="block">Retrieves the values of this uniform as a float array.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A new array with the values of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloats(float[])">
+<h3>getFloats</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getFloats</span><wbr><span class="parameters">(float[]&nbsp;fill)</span></div>
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>fill</code> - The array to fill</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloats(float[],int,int)">
+<h3>getFloats</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getFloats</span><wbr><span class="parameters">(float[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</span></div>
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dst</code> - The array to fill</dd>
+<dd><code>offset</code> - The position to start filling the array at</dd>
+<dd><code>length</code> - The number of values to read</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInt()">
+<h3>getInt</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getInt</span>()</div>
+<div class="block">Retrieves the value of this uniform as an integer.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The int value of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInts()">
+<h3>getInts</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int[]</span>&nbsp;<span class="element-name">getInts</span>()</div>
+<div class="block">Retrieves the values of this uniform as an int array.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A new array with the values of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInts(int[])">
+<h3>getInts</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getInts</span><wbr><span class="parameters">(int[]&nbsp;fill)</span></div>
+<div class="block">Retrieves the values of this uniform as an int array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>fill</code> - The array to fill</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInts(int[],int,int)">
+<h3>getInts</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getInts</span><wbr><span class="parameters">(int[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</span></div>
+<div class="block">Retrieves the values of this uniform as a int array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dst</code> - The array to fill</dd>
+<dd><code>offset</code> - The position to start filling the array at</dd>
+<dd><code>length</code> - The number of values to read</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector2f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2f...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector3f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3f...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector4f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4f...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector2i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2i...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector3i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3i...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector4i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4i...&nbsp;values)</span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix2f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix2f&nbsp;value)</span></div>
+<div class="block">Retrieves a matrix2x2 by the specified name</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix3f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3f&nbsp;value)</span></div>
+<div class="block">Retrieves a matrix3x3 by the specified name</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix4f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4f&nbsp;value)</span></div>
+<div class="block">Retrieves a matrix4x4 by the specified name</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3x2f&nbsp;value)</span></div>
+<div class="block">Retrieves a matrix3x2 by the specified name</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4x3f&nbsp;value)</span></div>
+<div class="block">Retrieves a matrix4x3 by the specified name</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
 </dl>
 </section>
 </li>

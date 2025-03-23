@@ -175,7 +175,7 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFramebuffers()" class="member-name-link">getFramebuffers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrCreateShaderUniform(java.lang.CharSequence)" class="member-name-link">getOrCreateShaderUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrCreateUniform(java.lang.CharSequence)" class="member-name-link">getOrCreateUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Retrieves a uniform by name or creates a reference to one that may exist in the future.</div>
 </div>
@@ -185,16 +185,6 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../event/VeilRenderLevelStageEvent.Stage.html" title="enum class in foundry.veil.api.event">VeilRenderLevelStageEvent.Stage</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderStage()" class="member-name-link">getRenderStage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@Nullable <a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShaderUniform(java.lang.CharSequence)" class="member-name-link">getShaderUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Retrieves a uniform by name.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShaderUniformSafe(java.lang.CharSequence)" class="member-name-link">getShaderUniformSafe</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Retrieves a uniform by name.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a>[]</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStages()" class="member-name-link">getStages</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -204,6 +194,16 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../registry/PostPipelineStageRegistry.PipelineType.html" title="class in foundry.veil.api.client.registry">PostPipelineStageRegistry.PipelineType</a><wbr>&lt;? extends <a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@Nullable <a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUniform(java.lang.CharSequence)" class="member-name-link">getUniform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a uniform by name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUniformSafe(java.lang.CharSequence)" class="member-name-link">getUniformSafe</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a uniform by name.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasStorageBlock(java.lang.CharSequence)" class="member-name-link">hasStorageBlock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -223,159 +223,16 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isReplace()" class="member-name-link">isReplace</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFloat(java.lang.CharSequence,float)" class="member-name-link">setFloat</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a float in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFloats(java.lang.CharSequence,float...)" class="member-name-link">setFloats</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float...&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of floats in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInt(java.lang.CharSequence,int)" class="member-name-link">setInt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an integer in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInts(java.lang.CharSequence,int...)" class="member-name-link">setInts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int...&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of integers in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(java.lang.CharSequence,org.joml.Matrix2fc,boolean)" class="member-name-link">setMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix2fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(java.lang.CharSequence,org.joml.Matrix3fc,boolean)" class="member-name-link">setMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix3fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc,boolean)" class="member-name-link">setMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix3x2fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(java.lang.CharSequence,org.joml.Matrix4fc,boolean)" class="member-name-link">setMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix4fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc,boolean)" class="member-name-link">setMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix4x3fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStorageBlock(java.lang.CharSequence,int)" class="member-name-link">setStorageBlock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStorageBlock(java.lang.CharSequence,int)" class="member-name-link">setStorageBlock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
  int&nbsp;binding)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the binding to use for the specified storage block.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUniformBlock(java.lang.CharSequence,int)" class="member-name-link">setUniformBlock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUniformBlock(java.lang.CharSequence,int)" class="member-name-link">setUniformBlock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
  int&nbsp;binding)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the binding to use for the specified uniform block.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVector(java.lang.CharSequence,float,float)" class="member-name-link">setVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a vector in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVector(java.lang.CharSequence,float,float,float)" class="member-name-link">setVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y,
- float&nbsp;z)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a vector in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVector(java.lang.CharSequence,float,float,float,float)" class="member-name-link">setVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y,
- float&nbsp;z,
- float&nbsp;w)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a vector in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectorI(java.lang.CharSequence,int,int)" class="member-name-link">setVectorI</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an integer vector in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectorI(java.lang.CharSequence,int,int,int)" class="member-name-link">setVectorI</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y,
- int&nbsp;z)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an integer vector in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectorI(java.lang.CharSequence,int,int,int,int)" class="member-name-link">setVectorI</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y,
- int&nbsp;z,
- int&nbsp;w)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an integer vector in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector2fc...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector2fc...&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of vectors in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector2ic...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector2ic...&nbsp;values)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of integer vectors in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector3fc...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector3fc...&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of vectors in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector3ic...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector3ic...&nbsp;values)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of integer vectors in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector4fc...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector4fc...&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of vectors in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVectors(java.lang.CharSequence,org.joml.Vector4ic...)" class="member-name-link">setVectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector4ic...&nbsp;values)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets an array of integer vectors in the shader.</div>
 </div>
 </div>
 </div>
@@ -384,14 +241,11 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.program.MutableUniformAccess">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.program.<a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></h3>
-<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix2fc)">setMatrix</a>, <a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3fc)">setMatrix</a>, <a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc)">setMatrix</a>, <a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4fc)">setMatrix</a>, <a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc)">setMatrix</a>, <a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float%5B%5D)">setVector</a>, <a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,org.joml.Vector2fc)">setVector</a>, <a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,org.joml.Vector3fc)">setVector</a>, <a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,org.joml.Vector4fc)">setVector</a>, <a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,org.joml.Vector2ic)">setVectorI</a>, <a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,org.joml.Vector3ic)">setVectorI</a>, <a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,org.joml.Vector4ic)">setVectorI</a></code></div>
-<div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.lwjgl.system.NativeResource">Methods inherited from interface&nbsp;org.lwjgl.system.NativeResource</h3>
 <code>close</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.post.PostPipeline">Methods inherited from interface&nbsp;foundry.veil.api.client.render.post.<a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></h3>
-<code><a href="../PostPipeline.html#getFloat(java.lang.CharSequence)">getFloat</a>, <a href="../PostPipeline.html#getFloats(java.lang.CharSequence,float%5B%5D)">getFloats</a>, <a href="../PostPipeline.html#getInt(java.lang.CharSequence)">getInt</a>, <a href="../PostPipeline.html#getInts(java.lang.CharSequence,int%5B%5D)">getInts</a>, <a href="../PostPipeline.html#getMatrix(java.lang.CharSequence,org.joml.Matrix2f)">getMatrix</a>, <a href="../PostPipeline.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3f)">getMatrix</a>, <a href="../PostPipeline.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)">getMatrix</a>, <a href="../PostPipeline.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4f)">getMatrix</a>, <a href="../PostPipeline.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)">getMatrix</a>, <a href="../PostPipeline.html#getStorageBlock(java.lang.CharSequence)">getStorageBlock</a>, <a href="../PostPipeline.html#getUniform(java.lang.CharSequence)">getUniform</a>, <a href="../PostPipeline.html#getUniformBlock(java.lang.CharSequence)">getUniformBlock</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector2f...)">getVector</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector2i...)">getVector</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector3f...)">getVector</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector3i...)">getVector</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector4f...)">getVector</a>, <a href="../PostPipeline.html#getVector(java.lang.CharSequence,org.joml.Vector4i...)">getVector</a></code></div>
+<code><a href="../PostPipeline.html#getStorageBlock(java.lang.CharSequence)">getStorageBlock</a>, <a href="../PostPipeline.html#getUniformBlock(java.lang.CharSequence)">getUniformBlock</a>, <a href="../PostPipeline.html#getUniformLocation(java.lang.CharSequence)">getUniformLocation</a></code></div>
 </section>
 </li>
 </ul>
@@ -505,17 +359,17 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 </section>
 </li>
 <li>
-<section class="detail" id="getShaderUniform(java.lang.CharSequence)">
-<h3>getShaderUniform</h3>
+<section class="detail" id="getUniform(java.lang.CharSequence)">
+<h3>getUniform</h3>
 <div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">@Nullable <a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getShaderUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getShaderUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">@Nullable <a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
 <div class="block">Retrieves a uniform by name.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#getShaderUniform(java.lang.CharSequence)">getShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
+<dd><code><a href="../PostPipeline.html#getUniform(java.lang.CharSequence)">getUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/UniformAccess.html#getShaderUniform(java.lang.CharSequence)">getShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
+<dd><code><a href="../../shader/program/UniformAccess.html#getUniform(java.lang.CharSequence)">getUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the uniform to get</dd>
 <dt>Returns:</dt>
@@ -524,16 +378,16 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 </section>
 </li>
 <li>
-<section class="detail" id="getShaderUniformSafe(java.lang.CharSequence)">
-<h3>getShaderUniformSafe</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getShaderUniformSafe</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getShaderUniformSafe(java.lang.CharSequence)">UniformAccess</a></code></span></div>
+<section class="detail" id="getUniformSafe(java.lang.CharSequence)">
+<h3>getUniformSafe</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getUniformSafe</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getUniformSafe(java.lang.CharSequence)">UniformAccess</a></code></span></div>
 <div class="block">Retrieves a uniform by name.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#getShaderUniformSafe(java.lang.CharSequence)">getShaderUniformSafe</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
+<dd><code><a href="../PostPipeline.html#getUniformSafe(java.lang.CharSequence)">getUniformSafe</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/UniformAccess.html#getShaderUniformSafe(java.lang.CharSequence)">getShaderUniformSafe</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
+<dd><code><a href="../../shader/program/UniformAccess.html#getUniformSafe(java.lang.CharSequence)">getUniformSafe</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the uniform to get</dd>
 <dt>Returns:</dt>
@@ -542,16 +396,16 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 </section>
 </li>
 <li>
-<section class="detail" id="getOrCreateShaderUniform(java.lang.CharSequence)">
-<h3>getOrCreateShaderUniform</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getOrCreateShaderUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getOrCreateShaderUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
+<section class="detail" id="getOrCreateUniform(java.lang.CharSequence)">
+<h3>getOrCreateUniform</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></span>&nbsp;<span class="element-name">getOrCreateUniform</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/UniformAccess.html#getOrCreateUniform(java.lang.CharSequence)">UniformAccess</a></code></span></div>
 <div class="block">Retrieves a uniform by name or creates a reference to one that may exist in the future.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#getOrCreateShaderUniform(java.lang.CharSequence)">getOrCreateShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
+<dd><code><a href="../PostPipeline.html#getOrCreateUniform(java.lang.CharSequence)">getOrCreateUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/UniformAccess.html#getOrCreateShaderUniform(java.lang.CharSequence)">getOrCreateShaderUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
+<dd><code><a href="../../shader/program/UniformAccess.html#getOrCreateUniform(java.lang.CharSequence)">getOrCreateUniform</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/UniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">UniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the uniform to get</dd>
 <dt>Returns:</dt>
@@ -628,413 +482,6 @@ implements <a href="../PostPipeline.html" title="interface in foundry.veil.api.c
 <dt>Parameters:</dt>
 <dd><code>name</code> - The name of the block to set</dd>
 <dd><code>binding</code> - The binding to use for that block</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFloat(java.lang.CharSequence,float)">
-<h3>setFloat</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFloat</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;value)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setFloat(java.lang.CharSequence,float)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a float in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setFloat(java.lang.CharSequence,float)">setFloat</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setFloat(java.lang.CharSequence,float)">setFloat</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVector(java.lang.CharSequence,float,float)">
-<h3>setVector</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVector(java.lang.CharSequence,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVector(java.lang.CharSequence,float,float,float)">
-<h3>setVector</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y,
- float&nbsp;z)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float,float)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVector(java.lang.CharSequence,float,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-<dd><code>z</code> - The z component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVector(java.lang.CharSequence,float,float,float,float)">
-<h3>setVector</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float&nbsp;x,
- float&nbsp;y,
- float&nbsp;z,
- float&nbsp;w)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float,float,float)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVector(java.lang.CharSequence,float,float,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVector(java.lang.CharSequence,float,float,float,float)">setVector</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-<dd><code>z</code> - The z component of the vector</dd>
-<dd><code>w</code> - The w component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setInt(java.lang.CharSequence,int)">
-<h3>setInt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;value)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setInt(java.lang.CharSequence,int)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an integer in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setInt(java.lang.CharSequence,int)">setInt</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setInt(java.lang.CharSequence,int)">setInt</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectorI(java.lang.CharSequence,int,int)">
-<h3>setVectorI</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectorI</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an integer vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectorI(java.lang.CharSequence,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectorI(java.lang.CharSequence,int,int,int)">
-<h3>setVectorI</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectorI</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y,
- int&nbsp;z)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int,int)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an integer vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectorI(java.lang.CharSequence,int,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-<dd><code>z</code> - The z component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectorI(java.lang.CharSequence,int,int,int,int)">
-<h3>setVectorI</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectorI</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int&nbsp;x,
- int&nbsp;y,
- int&nbsp;z,
- int&nbsp;w)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int,int,int)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an integer vector in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectorI(java.lang.CharSequence,int,int,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectorI(java.lang.CharSequence,int,int,int,int)">setVectorI</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>x</code> - The x component of the vector</dd>
-<dd><code>y</code> - The y component of the vector</dd>
-<dd><code>z</code> - The z component of the vector</dd>
-<dd><code>w</code> - The w component of the vector</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFloats(java.lang.CharSequence,float...)">
-<h3>setFloats</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFloats</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- float...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setFloats(java.lang.CharSequence,float...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of floats in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setFloats(java.lang.CharSequence,float...)">setFloats</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setFloats(java.lang.CharSequence,float...)">setFloats</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector2fc...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector2fc...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector2fc...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector2fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector2fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector3fc...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector3fc...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector3fc...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector3fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector3fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector4fc...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector4fc...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector4fc...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector4fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector4fc...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setInts(java.lang.CharSequence,int...)">
-<h3>setInts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- int...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setInts(java.lang.CharSequence,int...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of integers in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setInts(java.lang.CharSequence,int...)">setInts</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setInts(java.lang.CharSequence,int...)">setInts</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector2ic...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector2ic...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector2ic...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of integer vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector2ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector2ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector3ic...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector3ic...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector3ic...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of integer vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector3ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector3ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVectors(java.lang.CharSequence,org.joml.Vector4ic...)">
-<h3>setVectors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVectors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Vector4ic...&nbsp;values)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector4ic...)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets an array of integer vectors in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setVectors(java.lang.CharSequence,org.joml.Vector4ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setVectors(java.lang.CharSequence,org.joml.Vector4ic...)">setVectors</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>values</code> - The values to set in order</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMatrix(java.lang.CharSequence,org.joml.Matrix2fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix2fc&nbsp;value,
- boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix2fc,boolean)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a matrix in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix2fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setMatrix(java.lang.CharSequence,org.joml.Matrix2fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMatrix(java.lang.CharSequence,org.joml.Matrix3fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix3fc&nbsp;value,
- boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3fc,boolean)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a matrix in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix3x2fc&nbsp;value,
- boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc,boolean)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a matrix in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setMatrix(java.lang.CharSequence,org.joml.Matrix3x2fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMatrix(java.lang.CharSequence,org.joml.Matrix4fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix4fc&nbsp;value,
- boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4fc,boolean)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a matrix in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
- org.joml.Matrix4x3fc&nbsp;value,
- boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc,boolean)">MutableUniformAccess</a></code></span></div>
-<div class="block">Sets a matrix in the shader.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../shader/program/MutableUniformAccess.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../shader/program/MutableUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.program">MutableUniformAccess</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../PostPipeline.html#setMatrix(java.lang.CharSequence,org.joml.Matrix4x3fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../PostPipeline.html" title="interface in foundry.veil.api.client.render.post">PostPipeline</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>name</code> - The name of the uniform to set</dd>
-<dd><code>value</code> - The value to set</dd>
 </dl>
 </section>
 </li>

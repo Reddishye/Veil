@@ -148,8 +148,65 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#free()" class="member-name-link">free</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getArrayLength()" class="member-name-link">getArrayLength</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFloat()" class="member-name-link">getFloat</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the value of this uniform as a float.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFloats(float%5B%5D,int,int)" class="member-name-link">getFloats</a><wbr>(float[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInt()" class="member-name-link">getInt</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the value of this uniform as an integer.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInts(int%5B%5D,int,int)" class="member-name-link">getInts</a><wbr>(int[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the values of this uniform as a int array and stores them in the specified array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix2f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix2f&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a matrix2x2 by the specified name</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix3f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3f&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a matrix3x3 by the specified name</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3x2f&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a matrix3x2 by the specified name</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix4f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4f&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a matrix4x4 by the specified name</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)" class="member-name-link">getMatrix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4x3f&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a matrix4x3 by the specified name</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -157,7 +214,43 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#invalidate()" class="member-name-link">invalidate</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector2f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2f...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector3f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3f...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVector(java.lang.CharSequence,org.joml.Vector4f...)" class="member-name-link">getVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4f...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector2i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2i...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector3i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3i...&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVectori(java.lang.CharSequence,org.joml.Vector4i...)" class="member-name-link">getVectori</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4i...&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#invalidateCache()" class="member-name-link">invalidateCache</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Invalidates the uniform cache.</div>
 </div>
@@ -224,18 +317,6 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <div class="block">Sets a matrix in the shader.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(org.joml.Matrix3x2dc,boolean)" class="member-name-link">setMatrix</a><wbr>(org.joml.Matrix3x2dc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a double matrix in the shader.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(org.joml.Matrix3x2fc,boolean)" class="member-name-link">setMatrix</a><wbr>(org.joml.Matrix3x2fc&nbsp;value,
- boolean&nbsp;transpose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets a matrix in the shader.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(org.joml.Matrix4dc,boolean)" class="member-name-link">setMatrix</a><wbr>(org.joml.Matrix4dc&nbsp;value,
  boolean&nbsp;transpose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -248,13 +329,49 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <div class="block">Sets a matrix in the shader.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(org.joml.Matrix4x3dc,boolean)" class="member-name-link">setMatrix</a><wbr>(org.joml.Matrix4x3dc&nbsp;value,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix2x3(org.joml.Matrix3x2dc,boolean)" class="member-name-link">setMatrix2x3</a><wbr>(org.joml.Matrix3x2dc&nbsp;value,
  boolean&nbsp;transpose)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets a double matrix in the shader.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix(org.joml.Matrix4x3fc,boolean)" class="member-name-link">setMatrix</a><wbr>(org.joml.Matrix4x3fc&nbsp;value,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix2x3(org.joml.Matrix3x2fc,boolean)" class="member-name-link">setMatrix2x3</a><wbr>(org.joml.Matrix3x2fc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a matrix in the shader.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix3x2(org.joml.Matrix3x2dc,boolean)" class="member-name-link">setMatrix3x2</a><wbr>(org.joml.Matrix3x2dc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a double matrix in the shader.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix3x2(org.joml.Matrix3x2fc,boolean)" class="member-name-link">setMatrix3x2</a><wbr>(org.joml.Matrix3x2fc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a matrix in the shader.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix3x4(org.joml.Matrix4x3dc,boolean)" class="member-name-link">setMatrix3x4</a><wbr>(org.joml.Matrix4x3dc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a double matrix in the shader.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix3x4(org.joml.Matrix4x3fc,boolean)" class="member-name-link">setMatrix3x4</a><wbr>(org.joml.Matrix4x3fc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a matrix in the shader.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix4x3(org.joml.Matrix4x3dc,boolean)" class="member-name-link">setMatrix4x3</a><wbr>(org.joml.Matrix4x3dc&nbsp;value,
+ boolean&nbsp;transpose)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a double matrix in the shader.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMatrix4x3(org.joml.Matrix4x3fc,boolean)" class="member-name-link">setMatrix4x3</a><wbr>(org.joml.Matrix4x3fc&nbsp;value,
  boolean&nbsp;transpose)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets a matrix in the shader.</div>
@@ -327,10 +444,10 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <code>close</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.uniform.ShaderUniform">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.uniform.<a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></h3>
-<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#isValid()">isValid</a></code></div>
+<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloats()">getFloats</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloats(float%5B%5D)">getFloats</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInts()">getInts</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInts(int%5B%5D)">getInts</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#isValid()">isValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-foundry.veil.api.client.render.shader.uniform.ShaderUniformAccess">Methods inherited from interface&nbsp;foundry.veil.api.client.render.shader.uniform.<a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></h3>
-<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(float%5B%5D)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector2fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector3fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector4fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(int%5B%5D)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector2ic)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector3ic)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector4ic)">setVectorI</a></code></div>
+<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix2dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix2fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4dc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4fc)">setMatrix</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2dc)">setMatrix2x3</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2fc)">setMatrix2x3</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2dc)">setMatrix3x2</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2fc)">setMatrix3x2</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3dc)">setMatrix3x4</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3fc)">setMatrix3x4</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3dc)">setMatrix4x3</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3fc)">setMatrix4x3</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(float%5B%5D)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector2fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector3fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVector(org.joml.Vector4fc)">setVector</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(int%5B%5D)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector2ic)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector3ic)">setVectorI</a>, <a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setVectorI(org.joml.Vector4ic)">setVectorI</a></code></div>
 </section>
 </li>
 </ul>
@@ -365,14 +482,14 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 </section>
 </li>
 <li>
-<section class="detail" id="invalidate()">
-<h3>invalidate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">invalidate</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#invalidate()">ShaderUniform</a></code></span></div>
+<section class="detail" id="invalidateCache()">
+<h3>invalidateCache</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">invalidateCache</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#invalidateCache()">ShaderUniform</a></code></span></div>
 <div class="block">Invalidates the uniform cache.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#invalidate()">invalidate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#invalidateCache()">invalidateCache</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
 </dl>
 </section>
 </li>
@@ -409,6 +526,258 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 <dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
 <dt>Returns:</dt>
 <dd>The data type of this uniform in the shader</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getArrayLength()">
+<h3>getArrayLength</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getArrayLength</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getArrayLength()">getArrayLength</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Returns:</dt>
+<dd>The number of array elements in the uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloat()">
+<h3>getFloat</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFloat</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloat()">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves the value of this uniform as a float.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloat()">getFloat</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Returns:</dt>
+<dd>The float value of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFloats(float[],int,int)">
+<h3>getFloats</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getFloats</span><wbr><span class="parameters">(float[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloats(float%5B%5D,int,int)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves the values of this uniform as a float array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getFloats(float%5B%5D,int,int)">getFloats</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>dst</code> - The array to fill</dd>
+<dd><code>offset</code> - The position to start filling the array at</dd>
+<dd><code>length</code> - The number of values to read</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInt()">
+<h3>getInt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getInt</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInt()">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves the value of this uniform as an integer.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInt()">getInt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Returns:</dt>
+<dd>The int value of this uniform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInts(int[],int,int)">
+<h3>getInts</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getInts</span><wbr><span class="parameters">(int[]&nbsp;dst,
+ int&nbsp;offset,
+ int&nbsp;length)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInts(int%5B%5D,int,int)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves the values of this uniform as a int array and stores them in the specified array.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getInts(int%5B%5D,int,int)">getInts</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>dst</code> - The array to fill</dd>
+<dd><code>offset</code> - The position to start filling the array at</dd>
+<dd><code>length</code> - The number of values to read</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector2f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2f...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector2f...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector2f...)">getVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector3f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3f...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector3f...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector3f...)">getVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVector(java.lang.CharSequence,org.joml.Vector4f...)">
+<h3>getVector</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVector</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4f...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector4f...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVector(java.lang.CharSequence,org.joml.Vector4f...)">getVector</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector2i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector2i...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector2i...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector2i...)">getVectori</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector3i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector3i...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector3i...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector3i...)">getVectori</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVectori(java.lang.CharSequence,org.joml.Vector4i...)">
+<h3>getVectori</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getVectori</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Vector4i...&nbsp;values)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector4i...)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves an array of vectors by the specified name.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getVectori(java.lang.CharSequence,org.joml.Vector4i...)">getVectori</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>values</code> - The values to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix2f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix2f&nbsp;value)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix2f)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves a matrix2x2 by the specified name</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix2f)">getMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix3f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3f&nbsp;value)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3f)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves a matrix3x3 by the specified name</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3f)">getMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix4f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4f&nbsp;value)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4f)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves a matrix4x4 by the specified name</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4f)">getMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix3x2f&nbsp;value)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves a matrix3x2 by the specified name</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix3x2f)">getMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)">
+<h3>getMatrix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getMatrix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;name,
+ org.joml.Matrix4x3f&nbsp;value)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)">ShaderUniform</a></code></span></div>
+<div class="block">Retrieves a matrix4x3 by the specified name</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html#getMatrix(java.lang.CharSequence,org.joml.Matrix4x3f)">getMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniform.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniform</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>name</code> - The name of the uniform to get</dd>
+<dd><code>value</code> - The value to set</dd>
 </dl>
 </section>
 </li>
@@ -716,30 +1085,60 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 </section>
 </li>
 <li>
-<section class="detail" id="setMatrix(org.joml.Matrix3x2fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(org.joml.Matrix3x2fc&nbsp;value,
+<section class="detail" id="setMatrix2x3(org.joml.Matrix3x2fc,boolean)">
+<h3>setMatrix2x3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix2x3</span><wbr><span class="parameters">(org.joml.Matrix3x2fc&nbsp;value,
  boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2fc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2fc,boolean)">ShaderUniformAccess</a></code></span></div>
 <div class="block">Sets a matrix in the shader.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2fc,boolean)">setMatrix2x3</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>value</code> - The value to set</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setMatrix(org.joml.Matrix4x3fc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(org.joml.Matrix4x3fc&nbsp;value,
+<section class="detail" id="setMatrix3x2(org.joml.Matrix3x2fc,boolean)">
+<h3>setMatrix3x2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix3x2</span><wbr><span class="parameters">(org.joml.Matrix3x2fc&nbsp;value,
  boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3fc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2fc,boolean)">ShaderUniformAccess</a></code></span></div>
 <div class="block">Sets a matrix in the shader.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3fc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2fc,boolean)">setMatrix3x2</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMatrix3x4(org.joml.Matrix4x3fc,boolean)">
+<h3>setMatrix3x4</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix3x4</span><wbr><span class="parameters">(org.joml.Matrix4x3fc&nbsp;value,
+ boolean&nbsp;transpose)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3fc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block">Sets a matrix in the shader.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3fc,boolean)">setMatrix3x4</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMatrix4x3(org.joml.Matrix4x3fc,boolean)">
+<h3>setMatrix4x3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix4x3</span><wbr><span class="parameters">(org.joml.Matrix4x3fc&nbsp;value,
+ boolean&nbsp;transpose)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3fc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block">Sets a matrix in the shader.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3fc,boolean)">setMatrix4x3</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>value</code> - The value to set</dd>
 </dl>
@@ -791,30 +1190,60 @@ implements <a href="../../../../../api/client/render/shader/uniform/ShaderUnifor
 </section>
 </li>
 <li>
-<section class="detail" id="setMatrix(org.joml.Matrix3x2dc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(org.joml.Matrix3x2dc&nbsp;value,
+<section class="detail" id="setMatrix2x3(org.joml.Matrix3x2dc,boolean)">
+<h3>setMatrix2x3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix2x3</span><wbr><span class="parameters">(org.joml.Matrix3x2dc&nbsp;value,
  boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2dc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2dc,boolean)">ShaderUniformAccess</a></code></span></div>
 <div class="block">Sets a double matrix in the shader.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix3x2dc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix2x3(org.joml.Matrix3x2dc,boolean)">setMatrix2x3</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>value</code> - The value to set</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setMatrix(org.joml.Matrix4x3dc,boolean)">
-<h3>setMatrix</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix</span><wbr><span class="parameters">(org.joml.Matrix4x3dc&nbsp;value,
+<section class="detail" id="setMatrix3x2(org.joml.Matrix3x2dc,boolean)">
+<h3>setMatrix3x2</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix3x2</span><wbr><span class="parameters">(org.joml.Matrix3x2dc&nbsp;value,
  boolean&nbsp;transpose)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3dc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2dc,boolean)">ShaderUniformAccess</a></code></span></div>
 <div class="block">Sets a double matrix in the shader.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix(org.joml.Matrix4x3dc,boolean)">setMatrix</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x2(org.joml.Matrix3x2dc,boolean)">setMatrix3x2</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMatrix3x4(org.joml.Matrix4x3dc,boolean)">
+<h3>setMatrix3x4</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix3x4</span><wbr><span class="parameters">(org.joml.Matrix4x3dc&nbsp;value,
+ boolean&nbsp;transpose)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3dc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block">Sets a double matrix in the shader.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix3x4(org.joml.Matrix4x3dc,boolean)">setMatrix3x4</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>value</code> - The value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMatrix4x3(org.joml.Matrix4x3dc,boolean)">
+<h3>setMatrix4x3</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMatrix4x3</span><wbr><span class="parameters">(org.joml.Matrix4x3dc&nbsp;value,
+ boolean&nbsp;transpose)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3dc,boolean)">ShaderUniformAccess</a></code></span></div>
+<div class="block">Sets a double matrix in the shader.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html#setMatrix4x3(org.joml.Matrix4x3dc,boolean)">setMatrix4x3</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/client/render/shader/uniform/ShaderUniformAccess.html" title="interface in foundry.veil.api.client.render.shader.uniform">ShaderUniformAccess</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>value</code> - The value to set</dd>
 </dl>
