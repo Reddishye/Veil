@@ -395,6 +395,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Rebuilds all chunks in view without deleting old chunks.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T extends net.minecraft.client.renderer.texture.AbstractTexture &amp; <a href="texture/VeilPreloadedTexture.html" title="interface in foundry.veil.api.client.render.texture">VeilPreloadedTexture</a>&gt;<br><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerPreloadedTexture(net.minecraft.resources.ResourceLocation,T)" class="member-name-link">registerPreloadedTexture</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;path,
+ T&nbsp;texture)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Registers the specified texture as a preloaded texture that should be loaded on the background thread.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T extends net.minecraft.client.renderer.texture.AbstractTexture &amp; <a href="texture/VeilPreloadedTexture.html" title="interface in foundry.veil.api.client.render.texture">VeilPreloadedTexture</a>&gt;<br><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#registerPreloadedTexture(net.minecraft.resources.ResourceLocation,T,java.util.concurrent.Executor)" class="member-name-link">registerPreloadedTexture</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;path,
+ T&nbsp;texture,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Registers the specified texture as a preloaded texture that should be loaded on the background thread.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="VeilRenderer.html" title="class in foundry.veil.api.client.render">VeilRenderer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#renderer()" class="member-name-link">renderer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -578,6 +591,44 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>first</code> - The first unit to unbind from</dd>
 <dd><code>count</code> - The number of samplers to unbind</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="registerPreloadedTexture(net.minecraft.resources.ResourceLocation,T)">
+<h3 id="registerPreloadedTexture(net.minecraft.resources.ResourceLocation,net.minecraft.client.renderer.texture.AbstractTexture)">registerPreloadedTexture</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters-long">&lt;T extends net.minecraft.client.renderer.texture.AbstractTexture &amp; <a href="texture/VeilPreloadedTexture.html" title="interface in foundry.veil.api.client.render.texture">VeilPreloadedTexture</a>&gt;</span>
+<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;</span>&nbsp;<span class="element-name">registerPreloadedTexture</span><wbr><span class="parameters">(net.minecraft.resources.ResourceLocation&nbsp;path,
+ T&nbsp;texture)</span></div>
+<div class="block">Registers the specified texture as a preloaded texture that should be loaded on the background thread.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - The texture type to register</dd>
+<dt>Parameters:</dt>
+<dd><code>path</code> - The name of the texture to register as</dd>
+<dd><code>texture</code> - The texture to register</dd>
+<dt>Returns:</dt>
+<dd>A future for when the texture has loaded</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="registerPreloadedTexture(net.minecraft.resources.ResourceLocation,T,java.util.concurrent.Executor)">
+<h3 id="registerPreloadedTexture(net.minecraft.resources.ResourceLocation,net.minecraft.client.renderer.texture.AbstractTexture,java.util.concurrent.Executor)">registerPreloadedTexture</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters-long">&lt;T extends net.minecraft.client.renderer.texture.AbstractTexture &amp; <a href="texture/VeilPreloadedTexture.html" title="interface in foundry.veil.api.client.render.texture">VeilPreloadedTexture</a>&gt;</span>
+<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;</span>&nbsp;<span class="element-name">registerPreloadedTexture</span><wbr><span class="parameters">(net.minecraft.resources.ResourceLocation&nbsp;path,
+ T&nbsp;texture,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor)</span></div>
+<div class="block">Registers the specified texture as a preloaded texture that should be loaded on the background thread.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - The texture type to register</dd>
+<dt>Parameters:</dt>
+<dd><code>path</code> - The name of the texture to register as</dd>
+<dd><code>texture</code> - The texture to register</dd>
+<dd><code>executor</code> - The executor to load the texture on</dd>
+<dt>Returns:</dt>
+<dd>A future for when the texture has loaded</dd>
 </dl>
 </section>
 </li>
