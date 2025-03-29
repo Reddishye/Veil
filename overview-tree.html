@@ -116,6 +116,7 @@ loadScripts(document, 'script');</script>
 <li><a href="foundry/veil/ext/iris/package-tree.html">foundry.veil.ext.iris</a>, </li>
 <li><a href="foundry/veil/ext/sodium/package-tree.html">foundry.veil.ext.sodium</a>, </li>
 <li><a href="foundry/veil/impl/package-tree.html">foundry.veil.impl</a>, </li>
+<li><a href="foundry/veil/impl/client/package-tree.html">foundry.veil.impl.client</a>, </li>
 <li><a href="foundry/veil/impl/client/editor/package-tree.html">foundry.veil.impl.client.editor</a>, </li>
 <li><a href="foundry/veil/impl/client/imgui/package-tree.html">foundry.veil.impl.client.imgui</a>, </li>
 <li><a href="foundry/veil/impl/client/necromancer/render/package-tree.html">foundry.veil.impl.client.necromancer.render</a>, </li>
@@ -163,6 +164,7 @@ loadScripts(document, 'script');</script>
 <li><a href="foundry/veil/mixin/resource/package-tree.html">foundry.veil.mixin.resource</a>, </li>
 <li><a href="foundry/veil/mixin/resource/accessor/package-tree.html">foundry.veil.mixin.resource.accessor</a>, </li>
 <li><a href="foundry/veil/mixin/resource/client/package-tree.html">foundry.veil.mixin.resource.client</a>, </li>
+<li><a href="foundry/veil/mixin/scheduler/package-tree.html">foundry.veil.mixin.scheduler</a>, </li>
 <li><a href="foundry/veil/mixin/shader/client/package-tree.html">foundry.veil.mixin.shader.client</a>, </li>
 <li><a href="foundry/veil/mixin/tooltip/package-tree.html">foundry.veil.mixin.tooltip</a>, </li>
 <li><a href="foundry/veil/platform/package-tree.html">foundry.veil.platform</a>, </li>
@@ -342,6 +344,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">foundry.veil.impl.quasar.<a href="foundry/veil/impl/quasar/MathUtil.html" class="type-name-link" title="class in foundry.veil.impl.quasar">MathUtil</a></li>
 <li class="circle">foundry.veil.impl.resource.loader.<a href="foundry/veil/impl/resource/loader/McMetaResourceLoader.html" class="type-name-link" title="class in foundry.veil.impl.resource.loader">McMetaResourceLoader</a> (implements foundry.veil.api.resource.<a href="foundry/veil/api/resource/VeilResourceLoader.html" title="interface in foundry.veil.api.resource">VeilResourceLoader</a>)</li>
 <li class="circle">foundry.veil.mixin.fix.<a href="foundry/veil/mixin/fix/MemUtilMixin.html" class="type-name-link" title="class in foundry.veil.mixin.fix">MemUtilMixin</a></li>
+<li class="circle">foundry.veil.mixin.scheduler.<a href="foundry/veil/mixin/scheduler/MinecraftServerMixin.html" class="type-name-link" title="class in foundry.veil.mixin.scheduler">MinecraftServerMixin</a> (implements foundry.veil.ext.<a href="foundry/veil/ext/MinecraftServerExtension.html" title="interface in foundry.veil.ext">MinecraftServerExtension</a>)</li>
 <li class="circle">foundry.veil.api.molang.<a href="foundry/veil/api/molang/MolangExpressionCodec.html" class="type-name-link" title="class in foundry.veil.api.molang">MolangExpressionCodec</a></li>
 <li class="circle">foundry.veil.mixin.imgui.client.<a href="foundry/veil/mixin/imgui/client/MouseHandlerMixin.html" class="type-name-link" title="class in foundry.veil.mixin.imgui.client">MouseHandlerMixin</a></li>
 <li class="circle">foundry.veil.mixin.fix.<a href="foundry/veil/mixin/fix/NativeImageMixin.html" class="type-name-link" title="class in foundry.veil.mixin.fix">NativeImageMixin</a></li>
@@ -568,6 +571,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">foundry.veil.impl.client.render.pipeline.<a href="foundry/veil/impl/client/render/pipeline/VeilBloomRenderer.html" class="type-name-link" title="class in foundry.veil.impl.client.render.pipeline">VeilBloomRenderer</a></li>
 <li class="circle">foundry.veil.impl.<a href="foundry/veil/impl/VeilBuiltinPacks.html" class="type-name-link" title="class in foundry.veil.impl">VeilBuiltinPacks</a></li>
 <li class="circle">foundry.veil.<a href="foundry/veil/VeilClient.html" class="type-name-link" title="class in foundry.veil">VeilClient</a></li>
+<li class="circle">foundry.veil.impl.client.<a href="foundry/veil/impl/client/VeilClientSchedulerImpl.html" class="type-name-link" title="class in foundry.veil.impl.client">VeilClientSchedulerImpl</a></li>
 <li class="circle">foundry.veil.<a href="foundry/veil/VeilDebugHooks.html" class="type-name-link" title="class in foundry.veil">VeilDebugHooks</a></li>
 <li class="circle">foundry.veil.api.resource.<a href="foundry/veil/api/resource/VeilDynamicRegistry.html" class="type-name-link" title="class in foundry.veil.api.resource">VeilDynamicRegistry</a></li>
 <li class="circle">foundry.veil.impl.client.render.pipeline.<a href="foundry/veil/impl/client/render/pipeline/VeilFirstPersonRenderer.html" class="type-name-link" title="class in foundry.veil.impl.client.render.pipeline">VeilFirstPersonRenderer</a></li>
@@ -649,6 +653,19 @@ loadScripts(document, 'script');</script>
 </li>
 <li class="circle">foundry.veil.api.client.imgui.<a href="foundry/veil/api/client/imgui/CodeEditor.SaveCallback.html" class="type-name-link" title="interface in foundry.veil.api.client.imgui">CodeEditor.SaveCallback</a></li>
 <li class="circle">foundry.veil.api.client.color.<a href="foundry/veil/api/client/color/Colorc.html" class="type-name-link" title="interface in foundry.veil.api.client.color">Colorc</a></li>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html" class="type-name-link external-link" title="class or interface in java.lang">Comparable</a>&lt;T&gt;
+<ul>
+<li class="circle">java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Delayed.html" class="type-name-link external-link" title="class or interface in java.util.concurrent">Delayed</a>
+<ul>
+<li class="circle">java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ScheduledFuture.html" class="type-name-link external-link" title="class or interface in java.util.concurrent">ScheduledFuture</a>&lt;V&gt; (also extends java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Future.html" title="class or interface in java.util.concurrent" class="external-link">Future</a>&lt;V&gt;)
+<ul>
+<li class="circle">foundry.veil.api.<a href="foundry/veil/api/TickTaskScheduler.TickTask.html" class="type-name-link" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;V&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="circle">foundry.veil.ext.<a href="foundry/veil/ext/CompositeStateExtension.html" class="type-name-link" title="interface in foundry.veil.ext">CompositeStateExtension</a></li>
 <li class="circle">foundry.veil.api.client.necromancer.constraint.<a href="foundry/veil/api/client/necromancer/constraint/Constraint.html" class="type-name-link" title="interface in foundry.veil.api.client.necromancer.constraint">Constraint</a></li>
 <li class="circle">foundry.veil.api.client.render.<a href="foundry/veil/api/client/render/CullFrustum.html" class="type-name-link" title="interface in foundry.veil.api.client.render">CullFrustum</a></li>
@@ -669,6 +686,15 @@ loadScripts(document, 'script');</script>
 <li class="circle">foundry.veil.mixin.framebuffer.accessor.<a href="foundry/veil/mixin/framebuffer/accessor/FramebufferRenderTargetAccessor.html" class="type-name-link" title="interface in foundry.veil.mixin.framebuffer.accessor">FramebufferRenderTargetAccessor</a></li>
 <li class="circle">foundry.veil.api.event.<a href="foundry/veil/api/event/FreeNativeResourcesEvent.html" class="type-name-link" title="interface in foundry.veil.api.event">FreeNativeResourcesEvent</a></li>
 <li class="circle">foundry.veil.ext.<a href="foundry/veil/ext/FrustumExtension.html" class="type-name-link" title="interface in foundry.veil.ext">FrustumExtension</a></li>
+<li class="circle">java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Future.html" class="type-name-link external-link" title="class or interface in java.util.concurrent">Future</a>&lt;V&gt;
+<ul>
+<li class="circle">java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ScheduledFuture.html" class="type-name-link external-link" title="class or interface in java.util.concurrent">ScheduledFuture</a>&lt;V&gt; (also extends java.util.concurrent.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Delayed.html" title="class or interface in java.util.concurrent" class="external-link">Delayed</a>)
+<ul>
+<li class="circle">foundry.veil.api.<a href="foundry/veil/api/TickTaskScheduler.TickTask.html" class="type-name-link" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;V&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="circle">foundry.veil.mixin.perspective.accessor.<a href="foundry/veil/mixin/perspective/accessor/GameRendererAccessor.html" class="type-name-link" title="interface in foundry.veil.mixin.perspective.accessor">GameRendererAccessor</a></li>
 <li class="circle">foundry.veil.api.client.render.light.<a href="foundry/veil/api/client/render/light/InstancedLight.html" class="type-name-link" title="interface in foundry.veil.api.client.render.light">InstancedLight</a>
 <ul>
@@ -690,6 +716,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">foundry.veil.api.client.registry.<a href="foundry/veil/api/client/registry/LightTypeRegistry.DebugLightFactory.html" class="type-name-link" title="interface in foundry.veil.api.client.registry">LightTypeRegistry.DebugLightFactory</a></li>
 <li class="circle">foundry.veil.api.client.registry.<a href="foundry/veil/api/client/registry/LightTypeRegistry.RendererFactory.html" class="type-name-link" title="interface in foundry.veil.api.client.registry">LightTypeRegistry.RendererFactory</a>&lt;T&gt;</li>
 <li class="circle">foundry.veil.api.client.render.<a href="foundry/veil/api/client/render/MatrixStack.html" class="type-name-link" title="interface in foundry.veil.api.client.render">MatrixStack</a></li>
+<li class="circle">foundry.veil.ext.<a href="foundry/veil/ext/MinecraftServerExtension.html" class="type-name-link" title="interface in foundry.veil.ext">MinecraftServerExtension</a></li>
 <li class="circle">foundry.veil.api.quasar.data.module.<a href="foundry/veil/api/quasar/data/module/ModuleType.html" class="type-name-link" title="interface in foundry.veil.api.quasar.data.module">ModuleType</a>&lt;T&gt;</li>
 <li class="circle">net.minecraft.client.renderer.MultiBufferSource
 <ul>
@@ -875,7 +902,6 @@ loadScripts(document, 'script');</script>
 <li class="circle">foundry.veil.api.util.<a href="foundry/veil/api/util/FastNoiseLite.FractalType.html" class="type-name-link" title="enum class in foundry.veil.api.util">FastNoiseLite.FractalType</a></li>
 <li class="circle">foundry.veil.api.util.<a href="foundry/veil/api/util/FastNoiseLite.NoiseType.html" class="type-name-link" title="enum class in foundry.veil.api.util">FastNoiseLite.NoiseType</a></li>
 <li class="circle">foundry.veil.api.util.<a href="foundry/veil/api/util/FastNoiseLite.RotationType3D.html" class="type-name-link" title="enum class in foundry.veil.api.util">FastNoiseLite.RotationType3D</a></li>
-<li class="circle">foundry.veil.api.client.render.framebuffer.<a href="foundry/veil/api/client/render/framebuffer/FramebufferAttachmentDefinition.DataType.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.framebuffer">FramebufferAttachmentDefinition.DataType</a></li>
 <li class="circle">foundry.veil.api.client.render.framebuffer.<a href="foundry/veil/api/client/render/framebuffer/FramebufferAttachmentDefinition.Format.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.framebuffer">FramebufferAttachmentDefinition.Format</a></li>
 <li class="circle">foundry.veil.api.client.render.framebuffer.<a href="foundry/veil/api/client/render/framebuffer/FramebufferAttachmentDefinition.Type.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.framebuffer">FramebufferAttachmentDefinition.Type</a></li>
 <li class="circle">foundry.veil.impl.resource.action.<a href="foundry/veil/impl/resource/action/FramebufferEditAction.html" class="type-name-link" title="enum class in foundry.veil.impl.resource.action">FramebufferEditAction</a> (implements foundry.veil.api.resource.<a href="foundry/veil/api/resource/VeilResourceAction.html" title="interface in foundry.veil.api.resource">VeilResourceAction</a>&lt;T&gt;)</li>

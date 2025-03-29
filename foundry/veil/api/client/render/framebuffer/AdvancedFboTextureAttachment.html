@@ -124,10 +124,9 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,int,int,int,foundry.veil.api.client.render.texture.TextureFilter,java.lang.String)" class="member-name-link">AdvancedFboTextureAttachment</a><wbr>(int&nbsp;attachmentType,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int,int,int,int,int,foundry.veil.api.client.render.texture.TextureFilter,java.lang.String)" class="member-name-link">AdvancedFboTextureAttachment</a><wbr>(int&nbsp;attachmentType,
+ int&nbsp;internalFormat,
  int&nbsp;format,
- int&nbsp;texelFormat,
- int&nbsp;dataType,
  int&nbsp;width,
  int&nbsp;height,
  int&nbsp;mipmapLevels,
@@ -183,17 +182,17 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the OpenGL attachment point.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataType()" class="member-name-link">getDataType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../texture/TextureFilter.html" title="class in foundry.veil.api.client.render.texture">TextureFilter</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilter()" class="member-name-link">getFilter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../texture/TextureFilter.html" title="class in foundry.veil.api.client.render.texture">TextureFilter</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilter()" class="member-name-link">getFilter</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeight()" class="member-name-link">getHeight</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeight()" class="member-name-link">getHeight</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevels()" class="member-name-link">getLevels</a>()</code></div>
@@ -202,16 +201,17 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTexelFormat()" class="member-name-link">getTexelFormat</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWidth()" class="member-name-link">getWidth</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWidth()" class="member-name-link">getWidth</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.server.packs.resources.ResourceManager)" class="member-name-link">load</a><wbr>(net.minecraft.server.packs.resources.ResourceManager&nbsp;manager)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.server.packs.resources.ResourceManager)" class="member-name-link">load</a><wbr>(net.minecraft.server.packs.resources.ResourceManager&nbsp;manager)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilter(boolean,boolean)" class="member-name-link">setFilter</a><wbr>(boolean&nbsp;blur,
+ boolean&nbsp;mipmap)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unbindAttachment()" class="member-name-link">unbindAttachment</a>()</code></div>
@@ -223,7 +223,7 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.renderer.texture.AbstractTexture">Methods inherited from class&nbsp;net.minecraft.client.renderer.texture.AbstractTexture</h3>
-<code>bind, close, getId, releaseId, reset, setFilter</code></div>
+<code>bind, close, releaseId, reset</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -242,12 +242,11 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,int,int,int,int,int,int,foundry.veil.api.client.render.texture.TextureFilter,java.lang.String)">
+<section class="detail" id="&lt;init&gt;(int,int,int,int,int,int,foundry.veil.api.client.render.texture.TextureFilter,java.lang.String)">
 <h3>AdvancedFboTextureAttachment</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AdvancedFboTextureAttachment</span><wbr><span class="parameters">(int&nbsp;attachmentType,
+ int&nbsp;internalFormat,
  int&nbsp;format,
- int&nbsp;texelFormat,
- int&nbsp;dataType,
  int&nbsp;width,
  int&nbsp;height,
  int&nbsp;mipmapLevels,
@@ -258,9 +257,8 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attachmentType</code> - The attachment point to put this on</dd>
-<dd><code>format</code> - The format of the image data</dd>
-<dd><code>texelFormat</code> - The format of the image texel data</dd>
-<dd><code>dataType</code> - The type of data to store in the texture</dd>
+<dd><code>internalFormat</code> - The internal format of the image data</dd>
+<dd><code>format</code> - The format of the image data when initializing</dd>
 <dd><code>width</code> - The width of the attachment</dd>
 <dd><code>height</code> - The height of the attachment</dd>
 <dd><code>mipmapLevels</code> - The number of mipmaps levels to have</dd>
@@ -277,14 +275,13 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="create()">
-<h3>create</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">create</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="AdvancedFboAttachment.html#create()">AdvancedFboAttachment</a></code></span></div>
-<div class="block">Creates the attachment and initializes it with the default properties.</div>
+<section class="detail" id="setFilter(boolean,boolean)">
+<h3>setFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFilter</span><wbr><span class="parameters">(boolean&nbsp;blur,
+ boolean&nbsp;mipmap)</span></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="AdvancedFboAttachment.html#create()">create</a></code>&nbsp;in interface&nbsp;<code><a href="AdvancedFboAttachment.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFboAttachment</a></code></dd>
+<dt>Overrides:</dt>
+<dd><code>setFilter</code>&nbsp;in class&nbsp;<code>net.minecraft.client.renderer.texture.AbstractTexture</code></dd>
 </dl>
 </section>
 </li>
@@ -301,6 +298,28 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <dt>Parameters:</dt>
 <dd><code>framebuffer</code> - The framebuffer to attach to</dd>
 <dd><code>attachment</code> - The attachment point to add this attachment to</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="create()">
+<h3>create</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">create</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="AdvancedFboAttachment.html#create()">AdvancedFboAttachment</a></code></span></div>
+<div class="block">Creates the attachment and initializes it with the default properties.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AdvancedFboAttachment.html#create()">create</a></code>&nbsp;in interface&nbsp;<code><a href="AdvancedFboAttachment.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFboAttachment</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getId</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>getId</code>&nbsp;in class&nbsp;<code>net.minecraft.client.renderer.texture.AbstractTexture</code></dd>
 </dl>
 </section>
 </li>
@@ -442,18 +461,6 @@ implements <a href="AdvancedFboAttachment.html" title="interface in foundry.veil
 <dt>Returns:</dt>
 <dd>The OpenGL format for this attachment</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getTexelFormat()">
-<h3>getTexelFormat</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getTexelFormat</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getDataType()">
-<h3>getDataType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDataType</span>()</div>
 </section>
 </li>
 <li>

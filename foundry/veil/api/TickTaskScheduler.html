@@ -38,7 +38,7 @@ loadScripts(document, 'script');</script>
 <li>
 <p>Summary:</p>
 <ul>
-<li>Nested</li>
+<li><a href="#nested-class-summary">Nested</a></li>
 <li>Field</li>
 <li>Constr</li>
 <li><a href="#method-summary">Method</a></li>
@@ -58,7 +58,7 @@ loadScripts(document, 'script');</script>
 <div id="navbar-sub-list">
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
@@ -101,12 +101,29 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="TickTaskScheduler.TickTask.html" class="type-name-link" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;<a href="TickTaskScheduler.TickTask.html" title="type parameter in TickTaskScheduler.TickTask">V</a>&gt;</code></div>
+<div class="col-last even-row-color">
+<div class="block">A single task scheduled to run in the future.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -117,26 +134,31 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Executes the specified command on the next particle system tick.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isShutdown()" class="member-name-link">isShutdown</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#schedule(java.lang.Runnable,int)" class="member-name-link">schedule</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
- int&nbsp;delay)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Schedules the specified command to run in the specified number of ticks.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="TickTaskScheduler.html" title="interface in foundry.veil.api">TickTaskScheduler</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#get(net.minecraft.server.MinecraftServer)" class="member-name-link">get</a><wbr>(@Nullable net.minecraft.server.MinecraftServer&nbsp;server)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">Retrieves the tick task scheduler for the specified server or client.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;V&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;V&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#schedule(java.util.concurrent.Callable,int)" class="member-name-link">schedule</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;V&gt;&nbsp;callable,
- int&nbsp;delay)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isShutdown()" class="member-name-link">isShutdown</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#schedule(java.lang.Runnable,long)" class="member-name-link">schedule</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
+ long&nbsp;delay)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Schedules the specified command to run in the specified number of ticks.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scheduleAtFixedRate(java.lang.Runnable,int,int)" class="member-name-link">scheduleAtFixedRate</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
- int&nbsp;initialDelay,
- int&nbsp;period)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;V&gt;&nbsp;<a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a><wbr>&lt;V&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#schedule(java.util.concurrent.Callable,long)" class="member-name-link">schedule</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;V&gt;&nbsp;callable,
+ long&nbsp;delay)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Schedules the specified command to run in the specified number of ticks.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#scheduleAtFixedRate(java.lang.Runnable,long,long)" class="member-name-link">scheduleAtFixedRate</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
+ long&nbsp;initialDelay,
+ long&nbsp;period)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Schedules the specified command to run after the specified initial delay in ticks and at each fixed time interval in ticks.</div>
 </div>
 </div>
@@ -153,6 +175,20 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="get(net.minecraft.server.MinecraftServer)">
+<h3>get</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TickTaskScheduler.html" title="interface in foundry.veil.api">TickTaskScheduler</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(@Nullable
+ @Nullable net.minecraft.server.MinecraftServer&nbsp;server)</span></div>
+<div class="block">Retrieves the tick task scheduler for the specified server or client.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>server</code> - The server to get the scheduler for or <code>null</code> for the client scheduler</dd>
+<dt>Returns:</dt>
+<dd>The scheduler for that server</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="execute(java.lang.Runnable)">
 <h3>execute</h3>
@@ -171,11 +207,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 </section>
 </li>
 <li>
-<section class="detail" id="schedule(java.lang.Runnable,int)">
+<section class="detail" id="schedule(java.lang.Runnable,long)">
 <h3>schedule</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;</span>&nbsp;<span class="element-name">schedule</span><wbr><span class="parameters">(@NotNull
+<div class="member-signature"><span class="return-type"><a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;?&gt;</span>&nbsp;<span class="element-name">schedule</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
- int&nbsp;delay)</span></div>
+ long&nbsp;delay)</span></div>
 <div class="block">Schedules the specified command to run in the specified number of ticks.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -191,11 +227,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 </section>
 </li>
 <li>
-<section class="detail" id="schedule(java.util.concurrent.Callable,int)">
+<section class="detail" id="schedule(java.util.concurrent.Callable,long)">
 <h3>schedule</h3>
-<div class="member-signature"><span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;V&gt;</span>&nbsp;<span class="element-name">schedule</span><wbr><span class="parameters">(@NotNull
+<div class="member-signature"><span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;V&gt;</span>&nbsp;<span class="element-name">schedule</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;V&gt;&nbsp;callable,
- int&nbsp;delay)</span></div>
+ long&nbsp;delay)</span></div>
 <div class="block">Schedules the specified command to run in the specified number of ticks.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -211,12 +247,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 </section>
 </li>
 <li>
-<section class="detail" id="scheduleAtFixedRate(java.lang.Runnable,int,int)">
+<section class="detail" id="scheduleAtFixedRate(java.lang.Runnable,long,long)">
 <h3>scheduleAtFixedRate</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;</span>&nbsp;<span class="element-name">scheduleAtFixedRate</span><wbr><span class="parameters">(@NotNull
+<div class="member-signature"><span class="return-type"><a href="TickTaskScheduler.TickTask.html" title="interface in foundry.veil.api">TickTaskScheduler.TickTask</a>&lt;?&gt;</span>&nbsp;<span class="element-name">scheduleAtFixedRate</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;command,
- int&nbsp;initialDelay,
- int&nbsp;period)</span></div>
+ long&nbsp;initialDelay,
+ long&nbsp;period)</span></div>
 <div class="block">Schedules the specified command to run after the specified initial delay in ticks and at each fixed time interval in ticks.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

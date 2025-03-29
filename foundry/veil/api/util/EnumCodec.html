@@ -160,6 +160,9 @@ implements com.mojang.serialization.Codec&lt;T&gt;</span></div>
  com.mojang.serialization.DynamicOps&lt;T1&gt;&nbsp;ops,
  T1&nbsp;prefix)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.codec.StreamCodec<wbr>&lt;io.netty.buffer.ByteBuf,<wbr><a href="EnumCodec.html" title="type parameter in EnumCodec">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#streamCodec()" class="member-name-link">streamCodec</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -207,6 +210,16 @@ implements com.mojang.serialization.Codec&lt;T&gt;</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>encode</code>&nbsp;in interface&nbsp;<code>com.mojang.serialization.Encoder&lt;<a href="EnumCodec.html" title="type parameter in EnumCodec">T</a> extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;?&gt;&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="streamCodec()">
+<h3>streamCodec</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.network.codec.StreamCodec&lt;io.netty.buffer.ByteBuf,<wbr><a href="EnumCodec.html" title="type parameter in EnumCodec">T</a>&gt;</span>&nbsp;<span class="element-name">streamCodec</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A stream codec for packets</dd>
 </dl>
 </section>
 </li>

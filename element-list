@@ -62,6 +62,7 @@ foundry.veil.ext
 foundry.veil.ext.iris
 foundry.veil.ext.sodium
 foundry.veil.impl
+foundry.veil.impl.client
 foundry.veil.impl.client.editor
 foundry.veil.impl.client.imgui
 foundry.veil.impl.client.necromancer.render
@@ -109,6 +110,7 @@ foundry.veil.mixin.rendertype.client
 foundry.veil.mixin.resource
 foundry.veil.mixin.resource.accessor
 foundry.veil.mixin.resource.client
+foundry.veil.mixin.scheduler
 foundry.veil.mixin.shader.client
 foundry.veil.mixin.tooltip
 foundry.veil.platform
