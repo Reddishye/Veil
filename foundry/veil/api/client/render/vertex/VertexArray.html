@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../../../../impl/client/render/vertex/ARBVertexAttribBindingVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">ARBVertexAttribBindingVertexArray</a></code>, <code><a href="../../../../impl/client/render/vertex/DSAVertexAttribBindingVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">DSAVertexAttribBindingVertexArray</a></code>, <code><a href="../../../../impl/client/render/vertex/LegacyVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">LegacyVertexArray</a></code></dd>
+<dd><code><a href="../../../../impl/client/render/vertex/ARBVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">ARBVertexArray</a></code>, <code><a href="../../../../impl/client/render/vertex/DSAVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">DSAVertexArray</a></code>, <code><a href="../../../../impl/client/render/vertex/LegacyVertexArray.html" title="class in foundry.veil.impl.client.render.vertex">LegacyVertexArray</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">VertexArray</span>
@@ -116,7 +116,9 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="VertexArray.DrawUsage.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.DrawUsage</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The type of GL draw usages that can be used.</div>
+</div>
 <div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="VertexArray.IndexType.html" class="type-name-link" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.IndexType</a></code></div>
 <div class="col-last odd-row-color">
@@ -140,7 +142,7 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="col-first odd-row-color"><code>protected final <a href="VertexArrayBuilder.html" title="interface in foundry.veil.api.client.render.vertex">VertexArrayBuilder</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#builder" class="member-name-link">builder</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected int</code></div>
+<div class="col-first even-row-color"><code>protected com.mojang.blaze3d.vertex.VertexFormat.Mode</code></div>
 <div class="col-second even-row-color"><code><a href="#drawMode" class="member-name-link">drawMode</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
@@ -208,16 +210,21 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Replaces each element of the specified array with a new vertex array.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createBuffer()" class="member-name-link">createBuffer</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#draw()" class="member-name-link">draw</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#draw()" class="member-name-link">draw</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawIndirect(long,int,int)" class="member-name-link">drawIndirect</a><wbr>(long&nbsp;indirect,
+ int&nbsp;drawCount,
+ int&nbsp;stride)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawIndirect(long,int,int)" class="member-name-link">drawIndirect</a><wbr>(long&nbsp;indirect,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawIndirectWithRenderType(net.minecraft.client.renderer.RenderType,long,int,int)" class="member-name-link">drawIndirectWithRenderType</a><wbr>(net.minecraft.client.renderer.RenderType&nbsp;renderType,
+ long&nbsp;indirect,
  int&nbsp;drawCount,
  int&nbsp;stride)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -228,13 +235,24 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawInstancedWithRenderType(net.minecraft.client.renderer.RenderType,int)" class="member-name-link">drawInstancedWithRenderType</a><wbr>(net.minecraft.client.renderer.RenderType&nbsp;renderType,
+ int&nbsp;instances)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#drawWithRenderType(net.minecraft.client.renderer.RenderType)" class="member-name-link">drawWithRenderType</a><wbr>(net.minecraft.client.renderer.RenderType&nbsp;renderType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VertexArrayBuilder.html" title="interface in foundry.veil.api.client.render.vertex">VertexArrayBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#editFormat()" class="member-name-link">editFormat</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#free()" class="member-name-link">free</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.mojang.blaze3d.vertex.VertexFormat.Mode</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDrawMode()" class="member-name-link">getDrawMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
@@ -252,61 +270,56 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="block">Creates a new buffer object owned by this vertex array or retrieves an existing buffer.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDrawMode(int)" class="member-name-link">setDrawMode</a><wbr>(int&nbsp;drawMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDrawMode(com.mojang.blaze3d.vertex.VertexFormat.Mode)" class="member-name-link">setDrawMode</a><wbr>(com.mojang.blaze3d.vertex.VertexFormat.Mode&nbsp;drawMode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the type of polygons draw calls will draw.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDrawMode(com.mojang.blaze3d.vertex.VertexFormat.Mode)" class="member-name-link">setDrawMode</a><wbr>(com.mojang.blaze3d.vertex.VertexFormat.Mode&nbsp;drawMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the type of polygons draw calls will draw.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIndexCount(int,foundry.veil.api.client.render.vertex.VertexArray.IndexType)" class="member-name-link">setIndexCount</a><wbr>(int&nbsp;indexCount,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIndexCount(int,foundry.veil.api.client.render.vertex.VertexArray.IndexType)" class="member-name-link">setIndexCount</a><wbr>(int&nbsp;indexCount,
  <a href="VertexArray.IndexType.html" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.IndexType</a>&nbsp;indexType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the number of indices and what data type they are.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unbind()" class="member-name-link">unbind</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unbind()" class="member-name-link">unbind</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Unbinds the current vertex array.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#upload(int,com.mojang.blaze3d.vertex.MeshData,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(int&nbsp;attributeStart,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#upload(int,com.mojang.blaze3d.vertex.MeshData,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(int&nbsp;attributeStart,
  com.mojang.blaze3d.vertex.MeshData&nbsp;meshData,
  <a href="VertexArray.DrawUsage.html" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.DrawUsage</a>&nbsp;usage)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Uploads vanilla mc mesh data into this vertex array.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#upload(int,java.nio.ByteBuffer,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(int&nbsp;buffer,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#upload(int,java.nio.ByteBuffer,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(int&nbsp;buffer,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
  <a href="VertexArray.DrawUsage.html" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.DrawUsage</a>&nbsp;usage)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Uploads mesh data into the specified buffer.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#upload(com.mojang.blaze3d.vertex.MeshData,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(com.mojang.blaze3d.vertex.MeshData&nbsp;meshData,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#upload(com.mojang.blaze3d.vertex.MeshData,foundry.veil.api.client.render.vertex.VertexArray.DrawUsage)" class="member-name-link">upload</a><wbr>(com.mojang.blaze3d.vertex.MeshData&nbsp;meshData,
  <a href="VertexArray.DrawUsage.html" title="enum class in foundry.veil.api.client.render.vertex">VertexArray.DrawUsage</a>&nbsp;usage)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Uploads vanilla mc mesh data into this vertex array.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uploadIndexBuffer(com.mojang.blaze3d.vertex.MeshData.DrawState)" class="member-name-link">uploadIndexBuffer</a><wbr>(com.mojang.blaze3d.vertex.MeshData.DrawState&nbsp;drawState)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Uploads index data to the vertex array.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uploadIndexBuffer(com.mojang.blaze3d.vertex.MeshData.DrawState)" class="member-name-link">uploadIndexBuffer</a><wbr>(com.mojang.blaze3d.vertex.MeshData.DrawState&nbsp;drawState)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uploadIndexBuffer(java.nio.ByteBuffer)" class="member-name-link">uploadIndexBuffer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Uploads index data to the vertex array.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uploadIndexBuffer(java.nio.ByteBuffer)" class="member-name-link">uploadIndexBuffer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Uploads index data to the vertex array.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#uploadVertexBuffer(int,java.nio.ByteBuffer,int)" class="member-name-link">uploadVertexBuffer</a><wbr>(int&nbsp;buffer,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#uploadVertexBuffer(int,java.nio.ByteBuffer,int)" class="member-name-link">uploadVertexBuffer</a><wbr>(int&nbsp;buffer,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
  int&nbsp;usage)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Uploads vertex data to the specified buffer.</div>
 </div>
 </div>
@@ -390,7 +403,7 @@ implements org.lwjgl.system.NativeResource</span></div>
 <li>
 <section class="detail" id="drawMode">
 <h3>drawMode</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">drawMode</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">com.mojang.blaze3d.vertex.VertexFormat.Mode</span>&nbsp;<span class="element-name">drawMode</span></div>
 </section>
 </li>
 </ul>
@@ -498,14 +511,13 @@ implements org.lwjgl.system.NativeResource</span></div>
 <li>
 <section class="detail" id="getDrawMode()">
 <h3>getDrawMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDrawMode</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.mojang.blaze3d.vertex.VertexFormat.Mode</span>&nbsp;<span class="element-name">getDrawMode</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The GL polygon draw type</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a href="#setDrawMode(int)"><code>setDrawMode(int)</code></a></li>
 <li><a href="#setDrawMode(com.mojang.blaze3d.vertex.VertexFormat.Mode)"><code>setDrawMode(VertexFormat.Mode)</code></a></li>
 </ul>
 </dd>
@@ -577,16 +589,6 @@ implements org.lwjgl.system.NativeResource</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="createBuffer()">
-<h3>createBuffer</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">createBuffer</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>Creates a new vertex buffer</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="uploadVertexBuffer(int,java.nio.ByteBuffer,int)">
 <h3>uploadVertexBuffer</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">uploadVertexBuffer</span><wbr><span class="parameters">(int&nbsp;buffer,
@@ -629,14 +631,18 @@ implements org.lwjgl.system.NativeResource</span></div>
 <section class="detail" id="draw()">
 <h3>draw</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">draw</span>()</div>
-<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode.</div>
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="drawInstanced(int)">
 <h3>drawInstanced</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawInstanced</span><wbr><span class="parameters">(int&nbsp;instances)</span></div>
-<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.</div>
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>instances</code> - The number of instances to draw</dd>
@@ -650,6 +656,54 @@ implements org.lwjgl.system.NativeResource</span></div>
  int&nbsp;drawCount,
  int&nbsp;stride)</span></div>
 <div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.
+ <br>
+ <strong>Note: This only works if <a href="../VeilRenderSystem.html#multiDrawIndirectSupported()"><code>VeilRenderSystem.multiDrawIndirectSupported()</code></a> is <code>true</code></strong></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>indirect</code> - A pointer into the currently bound <code>GL40C.GL_DRAW_INDIRECT_BUFFER</code> or the address of a struct containing draw data</dd>
+<dd><code>drawCount</code> - The number of instances to draw</dd>
+<dd><code>stride</code> - The stride between commands or <code>0</code> if they are tightly packed</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="drawWithRenderType(net.minecraft.client.renderer.RenderType)">
+<h3>drawWithRenderType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawWithRenderType</span><wbr><span class="parameters">(net.minecraft.client.renderer.RenderType&nbsp;renderType)</span></div>
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode.
+ This method applies the specified render type automatically.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="drawInstancedWithRenderType(net.minecraft.client.renderer.RenderType,int)">
+<h3>drawInstancedWithRenderType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawInstancedWithRenderType</span><wbr><span class="parameters">(net.minecraft.client.renderer.RenderType&nbsp;renderType,
+ int&nbsp;instances)</span></div>
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.
+ This method applies the specified render type automatically.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>instances</code> - The number of instances to draw</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="drawIndirectWithRenderType(net.minecraft.client.renderer.RenderType,long,int,int)">
+<h3>drawIndirectWithRenderType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">drawIndirectWithRenderType</span><wbr><span class="parameters">(net.minecraft.client.renderer.RenderType&nbsp;renderType,
+ long&nbsp;indirect,
+ int&nbsp;drawCount,
+ int&nbsp;stride)</span></div>
+<div class="block">Draws <a href="#indexCount"><code>indexCount</code></a> number of indices with the previously defined draw mode a number of times.
+ This method applies the specified render type automatically.
+ <br>
+ <a href="#bind()"><code>bind()</code></a> must be called before this.
  <br>
  <strong>Note: This only works if <a href="../VeilRenderSystem.html#multiDrawIndirectSupported()"><code>VeilRenderSystem.multiDrawIndirectSupported()</code></a> is <code>true</code></strong></div>
 <dl class="notes">
@@ -670,17 +724,6 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dt>Parameters:</dt>
 <dd><code>indexCount</code> - The number of indices in the entire mesh</dd>
 <dd><code>indexType</code> - The data type of the indices</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setDrawMode(int)">
-<h3>setDrawMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDrawMode</span><wbr><span class="parameters">(int&nbsp;drawMode)</span></div>
-<div class="block">Sets the type of polygons draw calls will draw.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>drawMode</code> - The new draw mode</dd>
 </dl>
 </section>
 </li>
