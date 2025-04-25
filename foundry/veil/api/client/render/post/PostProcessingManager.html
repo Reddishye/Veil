@@ -156,7 +156,7 @@ implements org.lwjgl.system.NativeResource</span></div>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -211,6 +211,17 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remove(net.minecraft.resources.ResourceLocation)" class="member-name-link">remove</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;pipeline)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Removes the specified pipeline from the active profiles.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#resolvePost(foundry.veil.api.client.render.framebuffer.AdvancedFbo)" class="member-name-link">resolvePost</a><wbr>(@Nullable <a href="../framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Resolves the post-processing framebuffer color buffer into the specified framebuffer.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#resolvePost(foundry.veil.api.client.render.framebuffer.AdvancedFbo,int)" class="member-name-link">resolvePost</a><wbr>(@Nullable <a href="../framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+ int&nbsp;mask)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Resolves the post-processing framebuffer result into the specified framebuffer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runDefaultPipeline(foundry.veil.api.event.VeilRenderLevelStageEvent.Stage)" class="member-name-link">runDefaultPipeline</a><wbr>(<a href="../../../event/VeilRenderLevelStageEvent.Stage.html" title="enum class in foundry.veil.api.event">VeilRenderLevelStageEvent.Stage</a>&nbsp;stage)</code></div>
@@ -374,6 +385,32 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dt>Parameters:</dt>
 <dd><code>pipeline</code> - The pipeline to run</dd>
 <dd><code>resolvePost</code> - Whether to copy the post framebuffer to the main framebuffer after running the pipeline</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resolvePost(foundry.veil.api.client.render.framebuffer.AdvancedFbo)">
+<h3>resolvePost</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resolvePost</span><wbr><span class="parameters">(@Nullable
+ @Nullable <a href="../framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer)</span></div>
+<div class="block">Resolves the post-processing framebuffer color buffer into the specified framebuffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>framebuffer</code> - The framebuffer to resolve to</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resolvePost(foundry.veil.api.client.render.framebuffer.AdvancedFbo,int)">
+<h3>resolvePost</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resolvePost</span><wbr><span class="parameters">(@Nullable
+ @Nullable <a href="../framebuffer/AdvancedFbo.html" title="interface in foundry.veil.api.client.render.framebuffer">AdvancedFbo</a>&nbsp;framebuffer,
+ int&nbsp;mask)</span></div>
+<div class="block">Resolves the post-processing framebuffer result into the specified framebuffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>framebuffer</code> - The framebuffer to resolve to</dd>
+<dd><code>mask</code> - The buffers to copy</dd>
 </dl>
 </section>
 </li>
