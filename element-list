@@ -1,7 +1,6 @@
 foundry.veil
 foundry.veil.api
 foundry.veil.api.client.color
-foundry.veil.api.client.color.theme
 foundry.veil.api.client.editor
 foundry.veil.api.client.imgui
 foundry.veil.api.client.necromancer
@@ -15,10 +14,12 @@ foundry.veil.api.client.render.dynamicbuffer
 foundry.veil.api.client.render.ext
 foundry.veil.api.client.render.framebuffer
 foundry.veil.api.client.render.light
+foundry.veil.api.client.render.light.data
 foundry.veil.api.client.render.light.renderer
 foundry.veil.api.client.render.post
 foundry.veil.api.client.render.post.stage
 foundry.veil.api.client.render.post.uniform
+foundry.veil.api.client.render.profiler
 foundry.veil.api.client.render.rendertype
 foundry.veil.api.client.render.rendertype.layer
 foundry.veil.api.client.render.shader
@@ -30,7 +31,6 @@ foundry.veil.api.client.render.shader.texture
 foundry.veil.api.client.render.shader.uniform
 foundry.veil.api.client.render.texture
 foundry.veil.api.client.render.vertex
-foundry.veil.api.client.tooltip
 foundry.veil.api.client.util
 foundry.veil.api.compat
 foundry.veil.api.event
@@ -72,6 +72,7 @@ foundry.veil.impl.client.render.framebuffer
 foundry.veil.impl.client.render.light
 foundry.veil.impl.client.render.perspective
 foundry.veil.impl.client.render.pipeline
+foundry.veil.impl.client.render.profiler
 foundry.veil.impl.client.render.rendertype
 foundry.veil.impl.client.render.shader
 foundry.veil.impl.client.render.shader.block
@@ -92,6 +93,7 @@ foundry.veil.impl.resource.tree
 foundry.veil.mixin.debug
 foundry.veil.mixin.debug.accessor
 foundry.veil.mixin.debug.client
+foundry.veil.mixin.debug.client.profiler
 foundry.veil.mixin.dynamicbuffer.accessor
 foundry.veil.mixin.dynamicbuffer.client
 foundry.veil.mixin.fix
@@ -112,6 +114,5 @@ foundry.veil.mixin.resource.accessor
 foundry.veil.mixin.resource.client
 foundry.veil.mixin.scheduler
 foundry.veil.mixin.shader.client
-foundry.veil.mixin.tooltip
 foundry.veil.platform
 foundry.veil.platform.registry
