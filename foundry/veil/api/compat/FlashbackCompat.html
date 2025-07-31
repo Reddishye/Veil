@@ -101,8 +101,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final boolean</code></div>
-<div class="col-second even-row-color"><code><a href="#IS_LOADED" class="member-name-link">IS_LOADED</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="FlashbackCompat.html" title="interface in foundry.veil.api.compat">FlashbackCompat</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INSTANCE" class="member-name-link">INSTANCE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -112,14 +112,28 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="caption"><span>Static Methods</span></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#isLoaded()" class="member-name-link">isLoaded</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#backup(org.joml.Matrix4f,org.joml.Quaternionf)" class="member-name-link">backup</a><wbr>(org.joml.Matrix4f&nbsp;lastProjectionMatrix,
+ org.joml.Quaternionf&nbsp;lastViewQuaternion)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Stores the values of the respective ReplayUI fields</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#isLoaded()" class="member-name-link">isLoaded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#restore(org.joml.Matrix4f,org.joml.Quaternionf)" class="member-name-link">restore</a><wbr>(org.joml.Matrix4f&nbsp;lastProjectionMatrix,
+ org.joml.Quaternionf&nbsp;lastViewQuaternion)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Sets the values of the respective ReplayUI fields</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -134,9 +148,9 @@ loadScripts(document, 'script');</script>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="IS_LOADED">
-<h3>IS_LOADED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">IS_LOADED</span></div>
+<section class="detail" id="INSTANCE">
+<h3>INSTANCE</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="FlashbackCompat.html" title="interface in foundry.veil.api.compat">FlashbackCompat</a></span>&nbsp;<span class="element-name">INSTANCE</span></div>
 </section>
 </li>
 </ul>
@@ -154,6 +168,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether flashback is loaded</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="backup(org.joml.Matrix4f,org.joml.Quaternionf)">
+<h3>backup</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">backup</span><wbr><span class="parameters">(org.joml.Matrix4f&nbsp;lastProjectionMatrix,
+ org.joml.Quaternionf&nbsp;lastViewQuaternion)</span></div>
+<div class="block">Stores the values of the respective ReplayUI fields</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lastProjectionMatrix</code> - The backup matrix used to store ReplayUI's projection matrix</dd>
+<dd><code>lastViewQuaternion</code> - The backup quaternion used to store ReplayUI's camera rotation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="restore(org.joml.Matrix4f,org.joml.Quaternionf)">
+<h3>restore</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">restore</span><wbr><span class="parameters">(org.joml.Matrix4f&nbsp;lastProjectionMatrix,
+ org.joml.Quaternionf&nbsp;lastViewQuaternion)</span></div>
+<div class="block">Sets the values of the respective ReplayUI fields</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lastProjectionMatrix</code> - The matrix that ReplayUI's projection matrix should be set to</dd>
+<dd><code>lastViewQuaternion</code> - The quaternion that ReplayUI's camera rotation should be set to</dd>
 </dl>
 </section>
 </li>
