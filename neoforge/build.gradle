@@ -1,69 +1,17 @@
 plugins {
-    id 'net.neoforged.gradle.userdev'
-    id 'org.spongepowered.mixin'
+    id 'idea'
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev.legacyforge' version '2.0.91'
     id 'com.github.johnrengelman.shadow'
-}
-base {
-    archivesName = "${mod_name}-neoforge-${minecraft_version}"
-}
-mixin {
-    add(sourceSets.main, "${mod_id}.refmap.json")
-
-    config("${mod_id}.mixins.json")
-    config("${mod_id}.neoforge.mixins.json")
-}
-if (System.getenv('BUILD_NUMBER') != null) {
-    version += "." + System.getenv('BUILD_NUMBER')
+    // NO incluir mixin plugin
 }
 
-runs {
-    client {
-        systemProperty 'forge.logging.markers', 'REGISTRIES'
-        systemProperty 'forge.logging.console.level', 'debug'
-        
-        mods {
-            "${mod_id}" {
-                source sourceSets.main
-                source project(":common").sourceSets.main
-            }
-        }
-    }
-
-    server {
-        systemProperty 'forge.logging.markers', 'REGISTRIES'
-        systemProperty 'forge.logging.console.level', 'debug'
-        
-        mods {
-            "${mod_id}" {
-                source sourceSets.main
-                source project(":common").sourceSets.main
-            }
-        }
-    }
-
-    data {
-        systemProperty 'forge.logging.markers', 'REGISTRIES'
-        systemProperty 'forge.logging.console.level', 'debug'
-        
-        args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-        
-        mods {
-            "${mod_id}" {
-                source sourceSets.main
-                source project(":common").sourceSets.main
-            }
-        }
-    }
-}
-
-sourceSets.main.resources.srcDir 'src/generated/resources'
-
-configurations {
-    shade
-    implementation.extendsFrom shade
-}
+version = mod_version
+group = group
 
 repositories {
+    mavenLocal()
     exclusiveContent {
         forRepository {
             maven {
@@ -77,46 +25,107 @@ repositories {
     }
 }
 
+base {
+    archivesName = "${mod_name}-neoforge-${minecraft_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+legacyForge {
+    version = project.minecraft_version + '-' + project.forge_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+            sourceSet(project(":common").sourceSets.main)
+        }
+    }
+}
+
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+    srcDir project(":common").sourceSets.main.resources
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+    shade
+    implementation.extendsFrom shade
+}
+
+obfuscation {
+    createRemappingConfiguration(configurations.localRuntime)
+}
+
 dependencies {
-    implementation "net.neoforged:neoforge:$neoforge_version"
     compileOnly project(":common")
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    // runtimeOnly "maven.modrinth:embeddium:0.3.4+mc1.20.1"
+    // Tus dependencias shade
+    shade "gg.moonflower:molang-compiler:${molang_compiler_version}"
 
-    shade "gg.moonflower:molang-compiler:$molang_compiler_version"
-
-    shade "io.github.spair:imgui-java-binding:$imgui_version"
-    shade("io.github.spair:imgui-java-lwjgl3:$imgui_version") {
+    shade "io.github.spair:imgui-java-binding:${imgui_version}"
+    shade("io.github.spair:imgui-java-lwjgl3:${imgui_version}") {
         exclude group: 'org.lwjgl'
         exclude group: 'org.lwjgl.lwjgl'
     }
 
-    shade "io.github.spair:imgui-java-natives-linux:$imgui_version"
-    shade "io.github.spair:imgui-java-natives-macos-ft:$imgui_version"
-    shade "io.github.spair:imgui-java-natives-windows:$imgui_version"
+    shade "io.github.spair:imgui-java-natives-linux:${imgui_version}"
+    shade "io.github.spair:imgui-java-natives-macos-ft:${imgui_version}"
+    shade "io.github.spair:imgui-java-natives-windows:${imgui_version}"
 
-    shade("org.lwjgl:lwjgl-opencl:$lwjgl_version") {
+    shade("org.lwjgl:lwjgl-opencl:${lwjgl_version}") {
         transitive false
     }
-    shade("org.lwjgl:lwjgl-shaderc:$lwjgl_version") {
+    shade("org.lwjgl:lwjgl-shaderc:${lwjgl_version}") {
         transitive false
     }
 
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-linux"
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-linux-arm64"
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-macos"
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-macos-arm64"
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-windows"
-    shade "org.lwjgl:lwjgl-shaderc:$lwjgl_version:natives-windows-arm64"
-
-//    runtimeOnly "curse.maven:oculus-581495:4767500"
-//    runtimeOnly "curse.maven:rubidium-574856:4767529"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-linux"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-linux-arm64"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-macos"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-macos-arm64"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-windows"
+    shade "org.lwjgl:lwjgl-shaderc:${lwjgl_version}:natives-windows-arm64"
 }
 
 tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
     source(project(":common").sourceSets.main.allSource)
 }
+
 tasks.named("sourcesJar", Jar) {
     from(project(":common").sourceSets.main.allSource)
 }
@@ -127,46 +136,74 @@ processResources {
 
 jar {
     archiveClassifier = 'slim'
+    // Solo incluir mixin configs si tienes archivos de mixin
+    // manifest.attributes(["MixinConfigs": "${mod_id}.mixins.json,${mod_id}.neoforge.mixins.json"])
 }
 
 shadowJar {
     archiveClassifier = ''
     configurations = [project.configurations.shade]
+
     relocate "org.objectweb.asm", "${project.group}.lib.asm"
     relocate "org.lwjgl.opencl", "${project.group}.lib.opencl"
-//    relocate "gg.moonflower.molangcompiler", "${project.group}.lib.molangcompiler"
-//    relocate "imgui", "${project.group}.lib.imgui"
-//    relocate "io.imgui", "${project.group}.lib.imgui-natives"
-
     relocate "org.antlr", "${project.group}.lib.antlr"
     relocate "org.stringtemplate", "${project.group}.lib.stringtemplate"
     relocate "org.apache.commons.collections4", "${project.group}.lib.apache.commons.collections4"
     relocate "org.abego.treelayout", "${project.group}.lib.abego.treelayout"
     relocate "com.ibm.icu", "${project.group}.lib.ibm.icu"
-
     relocate "io.github.douira.glsl_transformer", "${project.group}.lib.douira.glsl_transformer"
 
-    relocate "io.github.spair:imgui-java-binding:$imgui_version", "${project.group}.lib.imgui-java-binding"
-    relocate "io.github.spair:imgui-java-lwjgl3:$imgui_version", "${project.group}.lib.imgui-java-lwjgl3"
-    relocate "io.github.spair:imgui-java-natives-linux:$imgui_version", "${project.group}.lib.imgui-java-natives-linux"
-    relocate "io.github.spair:imgui-java-natives-windows:$imgui_version", "${project.group}.lib.imgui-java-natives-windows"
-    relocate "io.github.spair:imgui-java-natives-macos:$imgui_version", "${project.group}.lib.imgui-java-natives-macos"
+    relocate "io.github.spair:imgui-java-binding:${imgui_version}", "${project.group}.lib.imgui-java-binding"
+    relocate "io.github.spair:imgui-java-lwjgl3:${imgui_version}", "${project.group}.lib.imgui-java-lwjgl3"
+    relocate "io.github.spair:imgui-java-natives-linux:${imgui_version}", "${project.group}.lib.imgui-java-natives-linux"
+    relocate "io.github.spair:imgui-java-natives-windows:${imgui_version}", "${project.group}.lib.imgui-java-natives-windows"
+    relocate "io.github.spair:imgui-java-natives-macos:${imgui_version}", "${project.group}.lib.imgui-java-natives-macos"
     relocate ":imgui-binding-natives-macosarm64-1.86.11", "${project.group}.lib.imgui-java-natives-macosarm64"
 }
 
 assemble.dependsOn shadowJar
 
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version        : minecraft_version,
+            minecraft_version_range  : minecraft_version_range,
+            forge_version            : forge_version,
+            forge_version_range      : forge_version_range,
+            loader_version_range     : loader_version_range,
+            mod_id                   : mod_id,
+            mod_name                 : mod_name,
+            mod_license              : license,
+            mod_version              : mod_version,
+            mod_authors              : mod_author,
+            mod_description          : description
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+legacyForge.ideSyncTask generateModMetadata
+
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        register('mavenJava', MavenPublication) {
             artifactId base.archivesName.get()
             from components.java
         }
     }
     repositories {
         maven {
-            url "file://" + System.getenv("local_maven")
+            url "file://${System.getenv("local_maven")}"
         }
+    }
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
     }
 }
 

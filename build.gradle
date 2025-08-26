@@ -6,6 +6,10 @@ plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1" apply false
 }
 
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
 subprojects {
     apply plugin: 'idea'
     apply plugin: 'java'
