@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "foundry.veil.forge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "${mod_id}.refmap.json",
+  "plugin": "foundry.veil.forge.VeilMixinPlugin",
+  "mixins": [
+    "RegistryDataLoaderMixin",
+    "resources.DelegatingPackResourcesMixin",
+    "resources.ForgePathPackResourcesMixin"
+  ],
+  "client": [
+    "client.MinecraftMixin",
+    "client.RenderTypeMixin",
+    "client.deferred.ModelBlockRendererMixin",
+    "client.deferred.ParticleEngineMixin",
+    "client.deferred.vanilla.LevelRendererMixin",
+    "client.quasar.LevelRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
