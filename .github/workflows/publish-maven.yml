@@ -1,0 +1,50 @@
+name: Publish to Maven
+
+on:
+  push:
+    branches: [ "1.20" ]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: github.repository == 'Reddishye/Veil'
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: 17
+        distribution: 'temurin'
+        
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+      
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        gradle-version: wrapper
+        
+    - name: Publish to Maven
+      run: ./gradlew clean publish --no-daemon --stacktrace
+      env:
+        BUILD_NUMBER: ${{ github.run_number }}
+        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+        MAVEN_URL: ${{ secrets.MAVEN_URL }}
+        
+    - name: Upload published artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: published-artifacts-${{ github.run_number }}
+        path: |
+          */build/libs/*.jar
+          */build/publications/
+        retention-days: 30

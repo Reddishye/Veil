@@ -4,21 +4,35 @@ on:
   push:
     branches:
       - 1.20
+  workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # if you have a protection rule on your repository, you'll need to give write permission to the workflow.
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Debug - List directory contents
-        run: |
-          pwd
-          ls -R
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'temurin'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: wrapper
+
+      - name: Generate Javadoc
+        run: ./gradlew javadoc --no-daemon
 
       - name: Deploy JavaDoc 🚀
         uses: MathieuSoysal/Javadoc-publisher.yml@v2.5.0
@@ -29,9 +43,11 @@ jobs:
           javadoc-source-folder: common/build/docs/javadoc
           project: gradle
 
-
-      - name: Debug - List directory contents
-        run: |
-          pwd
-          ls -R
+      - name: Upload Javadoc artifacts
+        uses: actions/upload-artifact@v4
         if: always()
+        with:
+          name: javadoc-${{ github.run_number }}
+          path: |
+            */build/docs/javadoc/
+          retention-days: 30
