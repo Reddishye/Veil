@@ -18,6 +18,7 @@ if "%1"=="test" goto :test
 if "%1"=="clean" goto :clean
 if "%1"=="publish-local" goto :publish-local
 if "%1"=="check-deps" goto :check-deps
+if "%1"=="check-repos" goto :check-repos
 
 echo ❌ Unknown command: %1
 echo.
@@ -37,6 +38,7 @@ echo   test           - Run all tests
 echo   clean          - Clean build artifacts
 echo   publish-local  - Publish to local Maven repository
 echo   check-deps     - Check for dependency updates
+echo   check-repos    - Check access to required repositories
 echo   help           - Show this help message
 echo.
 echo Examples:
@@ -136,6 +138,35 @@ goto :end
 :check-deps
 echo 🔍 Checking for dependency updates...
 call gradlew.bat dependencyUpdates --no-daemon
+goto :end
+
+:check-repos
+echo 🌐 Checking access to required repositories...
+set failed=0
+
+echo   Checking maven.fabricmc.net...
+curl -s --connect-timeout 10 --max-time 30 https://maven.fabricmc.net >nul 2>&1
+if %ERRORLEVEL% EQU 0 (echo     ✅ OK) else (echo     ❌ FAILED & set failed=1)
+
+echo   Checking maven.minecraftforge.net...
+curl -s --connect-timeout 10 --max-time 30 https://maven.minecraftforge.net >nul 2>&1
+if %ERRORLEVEL% EQU 0 (echo     ✅ OK) else (echo     ❌ FAILED & set failed=1)
+
+echo   Checking maven.neoforged.net...
+curl -s --connect-timeout 10 --max-time 30 https://maven.neoforged.net >nul 2>&1
+if %ERRORLEVEL% EQU 0 (echo     ✅ OK) else (echo     ❌ FAILED & set failed=1)
+
+echo   Checking repo.spongepowered.org...
+curl -s --connect-timeout 10 --max-time 30 https://repo.spongepowered.org >nul 2>&1
+if %ERRORLEVEL% EQU 0 (echo     ✅ OK) else (echo     ❌ FAILED & set failed=1)
+
+echo.
+if %failed% EQU 1 (
+    echo ⚠️  Some repositories are not accessible.
+    echo    This may cause build failures. See AUTOMATION.md for troubleshooting.
+) else (
+    echo ✅ All required repositories are accessible!
+)
 goto :end
 
 :end

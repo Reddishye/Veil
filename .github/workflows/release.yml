@@ -1,5 +1,14 @@
 name: Release Build
 
+# NOTE: This workflow requires access to several Maven repositories:
+# - maven.fabricmc.net (Fabric plugins)
+# - maven.minecraftforge.net (Forge plugins)  
+# - maven.neoforged.net (NeoForge plugins)
+# - repo.spongepowered.org (Sponge/Mixin)
+# 
+# If builds fail with plugin resolution errors, ensure these repositories
+# are accessible from your environment. See AUTOMATION.md for details.
+
 on:
   push:
     tags:

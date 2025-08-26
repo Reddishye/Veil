@@ -47,6 +47,16 @@ Veil uses automated GitHub Actions workflows for building, testing, and deployme
 3. Create a tag (`v1.0.0`) to trigger a release build
 4. Artifacts are automatically generated and available for download
 
+### Build Requirements
+
+⚠️ **Repository Access**: The build system requires access to several Maven repositories:
+- `maven.fabricmc.net` (Fabric)
+- `maven.minecraftforge.net` (Forge)
+- `maven.neoforged.net` (NeoForge)
+- `repo.spongepowered.org` (Sponge/Mixin)
+
+If builds fail due to repository access issues, see the [troubleshooting guide](AUTOMATION.md#troubleshooting) for solutions.
+
 ## Contribution Guidelines
 
 We welcome contributions from the community! Before contributing, please read

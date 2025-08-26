@@ -1,5 +1,14 @@
 name: CI Build
 
+# NOTE: This workflow requires access to several Maven repositories:
+# - maven.fabricmc.net (Fabric plugins)
+# - maven.minecraftforge.net (Forge plugins)  
+# - maven.neoforged.net (NeoForge plugins)
+# - repo.spongepowered.org (Sponge/Mixin)
+# 
+# If builds fail with plugin resolution errors, ensure these repositories
+# are accessible from your environment. See AUTOMATION.md for details.
+
 on:
   push:
     branches: [ "1.20", "main" ]
@@ -36,6 +45,27 @@ jobs:
         
     - name: Build with Gradle
       run: ./gradlew clean build --no-daemon --stacktrace
+      
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      if: success()
+      with:
+        name: build-artifacts-java-${{ matrix.java }}
+        path: |
+          */build/libs/*.jar
+          !*/build/libs/*-sources.jar
+          !*/build/libs/*-javadoc.jar
+        retention-days: 30
+        
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-java-${{ matrix.java }}
+        path: |
+          */build/test-results/test/
+          */build/reports/tests/test/
+        retention-days: 7
       
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

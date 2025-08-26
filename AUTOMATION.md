@@ -218,3 +218,85 @@ The existing Jenkins pipeline (`.jenkins/Jenkinsfile`) remains functional and ca
 - **GitHub Actions**: Comprehensive CI/CD with multiple triggers and environments
 
 Both systems can coexist during the transition period.
+
+## Troubleshooting
+
+### Repository Access Issues
+
+The Veil project requires access to several Maven repositories for Gradle plugins and dependencies:
+
+- `maven.fabricmc.net` - Fabric Loom plugin and dependencies
+- `maven.minecraftforge.net` - Minecraft Forge Gradle plugin
+- `maven.neoforged.net` - NeoForge Gradle plugin  
+- `repo.spongepowered.org` - Sponge/Mixin dependencies
+
+If builds fail with plugin resolution errors, ensure these repositories are accessible. In environments with firewall restrictions:
+
+#### For GitHub Actions
+
+1. **Repository Settings**: Add required domains to the repository's allowlist:
+   - Go to Settings → Copilot → Coding Agent Settings
+   - Add the Maven repository URLs to the allowlist
+   
+2. **Actions Setup**: Configure setup steps that run before firewall restrictions:
+   ```yaml
+   - name: Setup Maven repositories
+     run: |
+       # Pre-download required plugins and dependencies
+       ./gradlew help --no-daemon
+   ```
+
+3. **Alternative Approach**: Use third-party actions that handle repository access:
+   ```yaml
+   - name: Build with Gradle
+     uses: gradle/gradle-build-action@v2
+     with:
+       arguments: clean build --no-daemon
+   ```
+
+#### For Local Development
+
+Ensure your network allows access to the required repositories, or configure Gradle to use alternative mirrors:
+
+```gradle
+// In settings.gradle
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        // Add mirror repositories if needed
+        maven { url 'https://your-mirror-repo.com/maven-public/' }
+    }
+}
+```
+
+### Common Build Issues
+
+#### Plugin Resolution Failures
+```
+Plugin [id: 'fabric-loom', version: '1.4.2'] was not found
+```
+**Solution**: Verify repository access and check if alternative plugin repositories are available.
+
+#### Dependency Download Failures
+```
+Could not resolve all dependencies
+```
+**Solution**: Check network connectivity to Maven repositories and verify versions in `gradle.properties`.
+
+#### Memory Issues
+```
+Java heap space OutOfMemoryError
+```
+**Solution**: Increase Gradle JVM memory in `gradle.properties`:
+```properties
+org.gradle.jvmargs=-Xmx4G
+```
+
+### Getting Help
+
+If builds continue to fail after following these steps:
+
+1. Check the [GitHub Actions logs](../../actions) for detailed error messages
+2. Verify all required repositories are accessible from your environment
+3. Consider using the existing Jenkins pipeline as an alternative build method
+4. Open an issue with complete error logs and environment details

@@ -19,6 +19,7 @@ show_help() {
     echo "  clean          - Clean build artifacts"
     echo "  publish-local  - Publish to local Maven repository"
     echo "  check-deps     - Check for dependency updates"
+    echo "  check-repos    - Check access to required repositories"
     echo "  help           - Show this help message"
     echo ""
     echo "Examples:"
@@ -87,6 +88,36 @@ case "${1:-help}" in
         echo "🔍 Checking for dependency updates..."
         ensure_gradlew
         ./gradlew dependencyUpdates --no-daemon
+        ;;
+    "check-repos")
+        echo "🌐 Checking access to required repositories..."
+        
+        repos=(
+            "maven.fabricmc.net"
+            "maven.minecraftforge.net" 
+            "maven.neoforged.net"
+            "repo.spongepowered.org"
+        )
+        
+        failed=0
+        for repo in "${repos[@]}"; do
+            echo -n "  Checking $repo... "
+            if curl -s --connect-timeout 10 --max-time 30 "https://$repo" > /dev/null 2>&1; then
+                echo "✅ OK"
+            else
+                echo "❌ FAILED"
+                failed=1
+            fi
+        done
+        
+        if [ $failed -eq 1 ]; then
+            echo ""
+            echo "⚠️  Some repositories are not accessible."
+            echo "   This may cause build failures. See AUTOMATION.md for troubleshooting."
+        else
+            echo ""
+            echo "✅ All required repositories are accessible!"
+        fi
         ;;
     "help"|"--help"|"-h")
         show_help
