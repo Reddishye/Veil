@@ -16,6 +16,8 @@ if (System.getenv('BUILD_NUMBER') != null) {
     version += "." + System.getenv('BUILD_NUMBER')
 }
 
+// Temporarily commented out due to configuration issues
+/*
 runs {
     client {
         systemProperty 'forge.logging.markers', 'REGISTRIES'
@@ -55,6 +57,7 @@ runs {
         }
     }
 }
+*/
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
