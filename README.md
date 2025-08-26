@@ -1,5 +1,7 @@
 # Veil: Advanced Rendering for Minecraft 🖼️✨
 
+[![Build Status](https://github.com/Reddishye/Veil/actions/workflows/ci.yml/badge.svg)](https://github.com/Reddishye/Veil/actions/workflows/ci.yml)
+[![Release](https://github.com/Reddishye/Veil/actions/workflows/release.yml/badge.svg)](https://github.com/Reddishye/Veil/actions/workflows/release.yml)
 [![Veil 1.20](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fmaven.blamejared.com%2Ffoundry%2Fveil%2FVeil-common-1.20.1%2Fmaven-metadata.xml&label=Veil%201.20)](https://maven.blamejared.com/foundry/veil/Veil-common-1.20.1/)
 [![Veil 1.20.4](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fmaven.blamejared.com%2Ffoundry%2Fveil%2FVeil-common-1.20.4%2Fmaven-metadata.xml&label=Veil%201.20.4)](https://maven.blamejared.com/foundry/veil/Veil-common-1.20.4/)
 [![Javadoc](https://img.shields.io/badge/javadoc-latest-blue)](https://foundrymc.github.io/Veil/)
@@ -27,6 +29,33 @@ Explore our [Example Mod](https://github.com/FoundryMC/veil-example-mod) to see 
 integrate it into your projects.
 
 For comprehensive documentation and guides, visit our [Veil Developer Wiki](https://github.com/FoundryMC/Veil/wiki).
+
+## Build and Deployment
+
+Veil uses automated GitHub Actions workflows for building, testing, and deployment. See [AUTOMATION.md](AUTOMATION.md) for details on:
+
+- 🔨 **Automated Builds**: CI/CD across all platforms (Forge, NeoForge, Fabric)
+- 📦 **Artifact Generation**: Automatic JAR creation for releases
+- 🧪 **Testing**: Multi-platform testing on Java 17 and 21
+- 📚 **Documentation**: Automated Javadoc generation and deployment
+- 🚀 **Releases**: Automatic GitHub releases with platform-specific artifacts
+
+### Quick Start for Contributors
+
+1. Fork and clone the repository
+2. Push changes to trigger automated testing
+3. Create a tag (`v1.0.0`) to trigger a release build
+4. Artifacts are automatically generated and available for download
+
+### Build Requirements
+
+⚠️ **Repository Access**: The build system requires access to several Maven repositories:
+- `maven.fabricmc.net` (Fabric)
+- `maven.minecraftforge.net` (Forge)
+- `maven.neoforged.net` (NeoForge)
+- `repo.spongepowered.org` (Sponge/Mixin)
+
+If builds fail due to repository access issues, see the [troubleshooting guide](AUTOMATION.md#troubleshooting) for solutions.
 
 ## Contribution Guidelines
 

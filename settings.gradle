@@ -29,4 +29,5 @@ include("common")
 include("common:mojmap")
 include("fabric")
 include("forge")
-include("neoforge")
+// Temporarily disable neoforge due to configuration issues
+// include("neoforge")
