@@ -6,6 +6,10 @@ pluginManagement {
             url = 'https://maven.minecraftforge.net/'
         }
         maven {
+            name = 'NeoForged'
+            url = 'https://maven.neoforged.net/releases'
+        }
+        maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
@@ -25,3 +29,4 @@ include("common")
 include("common:mojmap")
 include("fabric")
 include("forge")
+include("neoforge")
